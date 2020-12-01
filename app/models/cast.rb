@@ -4,11 +4,9 @@ class Cast < ApplicationRecord
   has_many :categories, through: :sub_categories
   has_one :portrait
   
-  validates :type, presence: true
+  validates :type, inclusion: { in: %w[podcast minicast] }
   validates :title, presence: true
   validates :description, presence: true
   validates :localisation, presence: true
-  validates :audio_file, presence: true
-  validates :photo, presence: true
   validates :published_date, presence: true  
 end
