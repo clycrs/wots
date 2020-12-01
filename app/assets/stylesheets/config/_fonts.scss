@@ -1,16 +1,47 @@
 // Import Google fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
+// Import Futura PT - Adobe
+@import url("https://use.typekit.net/jia3fmb.css");
 
 // Define fonts for body and headers
-$body-font: "Work Sans", "Helvetica", "sans-serif";
-$headers-font: "Nunito", "Helvetica", "sans-serif";
+$body-font: "Futura PT", "Arial", "sans-serif";
 
-// To use a font file (.woff) uncomment following lines
-// @font-face {
-//   font-family: "Font Name";
-//   src: font-url('FontFile.eot');
-//   src: font-url('FontFile.eot?#iefix') format('embedded-opentype'),
-//        font-url('FontFile.woff') format('woff'),
-//        font-url('FontFile.ttf') format('truetype')
-// }
-// $my-font: "Font Name";
+p {
+  color: $blue-light;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+}
+
+h2 {
+  color: $blue-light;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 31px;
+  text-align: center;
+}
+
+h3 {
+  color: $blue-light;
+  font-size: 20px;
+  line-height: 26px;
+}
+
+label {
+  color: $blue-light;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.menu-podcast a {
+  color: $blue-light;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 139.4%;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.menu-podcast a:hover {
+  border-bottom: 1px solid $blue-dark;
+}

@@ -1,0 +1,39 @@
+/* Card Podcast */
+
+.card-podcast {
+  width: 100%;
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-item: center;
+}
+
+.podcast-img-container {
+  width: 110px;
+  border-radius: 12px;
+}
+
+.citation-card, .signature-card {
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  padding-left: 10px;
+}
+
+/* Card Minicast */
+
+.card-minicast {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-item: center;
+  border: 1px solid $blue-medium;
+  border-radius: 12px;
+}
+
+.podcast-picto-container {
+  width: 65px;
+  display: flex;
+  justify-content: space-between;
+  align-item: center;
+}
