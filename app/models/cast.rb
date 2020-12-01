@@ -6,6 +6,8 @@ class Cast < ApplicationRecord
   has_one :portrait
 
   validates :format, inclusion: { in: %w[podcast minicast] }
+  has_one_attached :photo
+
   validates :title, presence: true
   validates :description, presence: true
   validates :localisation, presence: true
