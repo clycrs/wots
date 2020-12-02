@@ -14,5 +14,7 @@ class Cast < ApplicationRecord
   validates :localisation, presence: true
   validates :published_date, presence: true
 
+
+  scope :podcasts, -> { where(format: "podcast") }
   scope :minicasts, -> { where(format: "minicast") }
 end
