@@ -16,4 +16,5 @@ class Cast < ApplicationRecord
 
 
   scope :podcasts, -> { where(format: "podcast") }
+  scope :minicasts, -> { where(format: "minicast") }
 end

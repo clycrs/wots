@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" style="background-color: darkblue;">
   <h2>Trouver une aventure</h2>
 
   <div id="map"
@@ -7,13 +7,17 @@
    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
 
-  <div class="legends">
+  <div class="legends-container">
     <div class="legend-details">
-      <img src="#">
+      <div class="legend-img">
+        <%#= image_tag "w.svg" %>
+      </div>
       <p>Podcasts</p>
     </div>
     <div class="legend-details">
-      <img src="#">
+      <div class="legend-img">
+       <%#= image_tag "microphone.svg" %>
+      </div>
       <p>Minicasts</p>
     </div>
   </div>
