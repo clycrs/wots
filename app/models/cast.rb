@@ -19,5 +19,5 @@ class Cast < ApplicationRecord
   scope :minicasts, -> { where(format: "minicast") }
 
   geocoded_by :localisation
-  after_validation :geocode, if: :will_save_change_to_address?
+  after_validation :geocode, if: :will_save_change_to_localisation?
 end
