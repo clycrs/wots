@@ -17,4 +17,7 @@ class Cast < ApplicationRecord
 
   scope :podcasts, -> { where(format: "podcast") }
   scope :minicasts, -> { where(format: "minicast") }
+
+  geocoded_by :localisation
+  after_validation :geocode, if: :will_save_change_to_address?
 end
