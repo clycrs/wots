@@ -13,4 +13,6 @@ class Cast < ApplicationRecord
   validates :description, presence: true
   validates :localisation, presence: true
   validates :published_date, presence: true
+
+  scope :minicasts, -> { where(format: "minicast") }
 end
