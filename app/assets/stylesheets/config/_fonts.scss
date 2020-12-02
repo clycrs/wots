@@ -1,10 +1,13 @@
 // Import Google fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
 // Import Futura PT - Adobe
-@import url("https://use.typekit.net/jia3fmb.css");
+@font-face {
+  font-family: 'Futura-PT-Light';
+  src: font-url('FuturaPTLight.woff') format('woff')
+}
 
 // Define fonts for body and headers
-$body-font: "Futura PT", "Arial", "sans-serif";
+$body-font: "Futura-PT-Light", "Arial", "sans-serif";
 
 p {
   color: $blue-light;
