@@ -1,2 +1,33 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="container">
+  <h2>Trouver une aventure</h2>
+
+  <div id="map"
+   style="width: 100%; height: 480px;"
+   data-markers="<%= @markers.to_json %>"
+   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
+
+  <div class="legends">
+    <div class="legend-details">
+      <img src="#">
+      <p>Podcasts</p>
+    </div>
+    <div class="legend-details">
+      <img src="#">
+      <p>Minicasts</p>
+    </div>
+  </div>
+
+  <h2>Les plus écoutés</h2>
+
+  <div>
+    <ul>
+      <li>podcast</li>
+      <li>podcast</li>
+      <li>minicast</li>
+      <li>podcast</li>
+      <li>minicast</li>
+    </ul>
+  </div>
+
+</div>
