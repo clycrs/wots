@@ -8,16 +8,30 @@
   flex-grow: 0;
   color: white;
 }
+.vagues {
+  width: 25px;
+  height: 20px;
+}
 .navbar a {
   text-decoration:none; 
   color: #ffff;
 }
-
+// .nav-link:after {
+//   position: absolute;
+//   content: '';
+//   border-bottom: 1px solid #fff;
+//   width: 70%;
+//   transform: translateX(-50%);
+//   bottom: -15px;
+//   left: 50%;
+// }
 .nav-link a {
   text-decoration:none; 
-  color: #ffff;
+  color: #fff !important;
 }
-
+.navbar-light .navbar-nav .nav-link {
+  color: #fff !important;
+}
 .active {
  color: white;
 }
