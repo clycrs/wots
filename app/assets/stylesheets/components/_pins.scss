@@ -1,0 +1,25 @@
+/* Bloc legend homepage */
+
+.legends-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.legend-details {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center
+}
+
+.legend-img {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center
+  background-color: $blue-light;
+  border-radius: 3px;
+}
