@@ -1,0 +1,28 @@
+<div class="container">
+  <h2>Bienvenue de sur le profile de <%= @user.nickname %></h2>
+
+  <%= cl_image_tag @user.photo.key, alt: "alttext", class: "avatar" %>
+  <%= @user.description %>
+
+  
+  <h3>Ses enregistrements</h3>
+
+  <div class="register list">
+    <div class="row">
+      <% @minicasts.each do |minicast| %>
+      <div class="cards-minicast" >        
+        <%= cl_image_tag "components/play.svg", alt: "alttext", class: "card-img" %>
+        <div class="card-body">
+        <%= minicast.category %>
+        <%= minicast.name %>
+        <%= %>
+        
+        </div>
+        <%end%>
+      </div>
+     <%end%>
+    </div>
+  </div>
+</div>
+ 
+  
