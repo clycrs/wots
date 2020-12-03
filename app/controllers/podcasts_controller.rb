@@ -6,7 +6,7 @@ class PodcastsController < ApplicationController
     @markers = @podcasts.geocoded.map do |podcast|
       {
         lat: podcast.latitude,
-        lng: podcast.longitude,
+        lng: podcast.longitude
         infoWindow: render_to_string(partial: "info_window", locals: { cast: cast })
       }
     end
