@@ -5,16 +5,16 @@
 }
 
 .navbar .navbar-collapse {
+  text-decoration:none; 
   flex-grow: 0;
-  color: white;
-}
+  }
 .vagues {
   width: 25px;
   height: 20px;
 }
 .navbar a {
   text-decoration:none; 
-  color: #ffff;
+  
 }
 // .nav-link:after {
 //   position: absolute;

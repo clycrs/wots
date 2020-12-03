@@ -2,8 +2,8 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
 
-  resources :users
-  resource :profiles, only: [:show]
+  resources :users #public
+  resource :profile, only: [:show]  #current_user
   resources :categories, only: [:index]
   # resources :casts, except: [:edit, :update] do
   #   resources :comments, only: [:create]

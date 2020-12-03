@@ -1,0 +1,33 @@
+<div class="container text-center">
+
+   
+  <%= cl_image_tag @user.photo.key, alt: "alttext", class: "avatar-large" %>
+  
+  <div class="description">
+  <%= @user.description %>
+  </div>
+
+  <%= link_to new_minicast_path do %>
+  <h3>S'enregistrer</h3>  
+              
+    <% end %>
+
+
+    <h3>Mes Minicasts</h3>
+
+    <div class="register list">
+      <div class="row">
+        <% @minicasts.each do |minicast| %>
+          <div class="card-minicast" >
+            <div>
+              <img src="../../assets/images/components/play.svg" alt="alttext" class="card-img"> 
+            </div>       
+            <div class="card-body">
+              <h5><%=minicast.title%></h2>
+            </div>
+          </div>
+        <%end%>
+      </div>
+    </div>
+  </div>
+</div>
