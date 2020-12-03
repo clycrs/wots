@@ -1,8 +1,33 @@
+/* Bloc map */
+
+#map {
+  border-radius: 12px;
+}
+
+
+/* pop up info */
+
 .mapboxgl-popup {
-  max-width: 200px;
+  padding: 15px;
 }
 
 .mapboxgl-popup-content {
+  max-width: 180px;
+  border-radius: 12px;
   text-align: center;
-  font-family: 'Open Sans', sans-serif;
+
+}
+
+.mapboxgl-popup-content p {
+  color: $blue-dark;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  max-width: 150px;
+  border-radius: 6px;
+}
+
+.mapboxgl-popup-content a {
+  text-decoration: none;
+  color: white;
 }

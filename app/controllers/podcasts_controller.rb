@@ -1,18 +1,15 @@
 class PodcastsController < ApplicationController
   def index
     @podcasts = Cast.podcasts
-
-    # # Geocoding mapbox
-    # @markers = @podcasts.geocoded.map do |podcast|
-    #   {
-    #     lat: podcast.latitude,
-    #     lng: podcast.longitude
-    #     infoWindow: render_to_string(partial: "info_window", locals: { cast: cast })
-    #   }
-    # end
   end
 
   def show
-    @podcast = Cast.find(params[:id])
+    @podcasts         = Cast.where(format: "podcast")
+    @podcast          = @podcasts.find(params[:id])
+
+    @index_podcast    = Cast.podcasts.index(@podcast) + 1
+
+    @previous_podcast = Cast.podcasts[@index_podcast - 2]
+    @next_podcast     = Cast.podcasts[@index_podcast]
   end
 end

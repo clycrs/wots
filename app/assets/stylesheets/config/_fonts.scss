@@ -2,26 +2,41 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
 // Import Futura PT - Adobe
 @font-face {
+  font-family: 'Futura-PT-Book';
+  src: font-url('FuturaPTBook.woff') format('woff');
+}
+
+@font-face {
   font-family: 'Futura-PT-Light';
-  src: font-url('FuturaPTLight.woff') format('woff')
+  src: font-url('FuturaPTLight.woff') format('woff');
+ }
+
+@font-face {
+  font-family: 'Futura-PT-Medium';
+  src: font-url('FuturaPTMedium.woff') format('woff');
 }
 
 // Define fonts for body and headers
 $body-font: "Futura-PT-Light", "Arial", "sans-serif";
+$futura-book: "Futura-PT-Book", "Arial", "sans-serif";
+$futura-medium: "Futura-PT-Medium", "Arial", "sans-serif";
 
 p {
   color: $blue-light;
   font-size: 16px;
   line-height: 21px;
   text-align: center;
+  margin: 0;
 }
 
 h2 {
+  font-family: $futura-medium;
   color: $blue-light;
   font-weight: 500;
   font-size: 24px;
   line-height: 31px;
   text-align: center;
+  margin: 20px 0;
 }
 
 h3 {
@@ -47,4 +62,13 @@ label {
 
 .menu-podcast a:hover {
   border-bottom: 1px solid $blue-dark;
+}
+
+.signature p {
+  font-family: $futura-book;
+  color: $blue-medium;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: right;
+  margin: 0;
 }
