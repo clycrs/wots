@@ -1,0 +1,53 @@
+.podcast-show {
+
+  body {
+    background-color: white;
+  }
+
+  h1:after {
+      height: 2px;
+      display: block;
+      width: 30px;
+      background: #112938;
+      margin: 0 auto;
+      content: '';
+  }
+
+  h2 {
+      color: #112938;
+  }
+
+  .nav-link {
+      color: #CFD4D7;
+      opacity: .5 !important;
+
+  }
+
+  .tab-pane {
+      color: #112938;
+  }
+
+  .nav-link.active {
+    background-color: white !important;
+    color: #112938 !important;
+  }
+
+  .player-cover {
+
+  }
+
+  iframe {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  img {
+    border-radius: 12px;
+  }
+
+  span {
+    color: black;
+  }
+
+}
