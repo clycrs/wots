@@ -1,12 +1,26 @@
-.btn-primary {
+.btn-master {
   font-size: 16px;
   padding: 20px 30px;
-  background-color: blue-medium;
-  border-radius: 28px
+  background-color: $blue-medium;
+  border-radius: 28px;
 }
 
 .btn-record {
   display: flex;
   justify-content: space-between;
   align-item: center;
+}
+
+/* Bouton dans l'info-box de la map */
+
+.btn-map {
+  font-size: 14px;
+  padding: 10px 15px;
+  background-color: $blue-medium;
+  border-radius: 17px
+}
+
+.btn-map a {
+  text-decoration: none;
+  color: white;
 }

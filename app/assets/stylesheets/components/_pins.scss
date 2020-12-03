@@ -2,24 +2,31 @@
 
 .legends-container {
   width: 100%;
+  height: auto;
   display: flex;
   justify-content: center;
-  align-items: center
+  align-items: center;
+  margin: 25px 0;
 }
 
 .legend-details {
   display: flex;
   justify-content: flex-start;
-  align-items: center
+  align-items: center;
 }
 
 .legend-img {
   width: 35px;
   height: 35px;
   display: flex;
-  flex-direction: column;
   justify-content: space-around;
-  align-items: center
+  align-items: center;
   background-color: $blue-light;
   border-radius: 3px;
+  margin: 0 10px;
+}
+
+p.legend-txt {
+  margin: 0;
+  font-size: 20px;
 }

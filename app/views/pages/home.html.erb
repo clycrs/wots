@@ -2,7 +2,7 @@
   <h2>Trouver une aventure</h2>
 
   <div id="map"
-   style="width: 100%; height: 480px;"
+   style="width: 100%; height: 450px;"
    data-markers="<%= @markers.to_json %>"
    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
@@ -10,29 +10,34 @@
   <div class="legends-container">
     <div class="legend-details">
       <div class="legend-img">
-        <%#= image_tag "w.svg" %>
+        <%= image_tag "components/w.svg", size: "26x26" %>
       </div>
-      <p>Podcasts</p>
+      <p class="legend-txt">Podcasts</p>
     </div>
     <div class="legend-details">
       <div class="legend-img">
-       <%#= image_tag "microphone.svg" %>
+       <%= image_tag "components/microphone.svg", size: "25x25" %>
       </div>
-      <p>Minicasts</p>
+      <p class="legend-txt">Minicasts</p>
     </div>
-
   </div>
 
   <h2>Les plus écoutés</h2>
 
-  <div>
-    <ul>
-      <li>podcast</li>
-      <li>podcast</li>
-      <li>minicast</li>
-      <li>podcast</li>
-      <li>minicast</li>
-    </ul>
-  </div>
+  <% @podcasts.limit(5).each do |podcast| %>
+    <%= link_to podcast_path(podcast) do %>
+    <div class="card-podcast">
+        <%= cl_image_tag podcast.photo.key, alt: "illustration", class: "podcast-img-container" %>
+          <div class="card-txts">
+            <div class="citation-card">
+              <p><%= podcast.title %></p>
+            </div>
+            <div class="signature">
+              <p><%= podcast.portrait.title %></p>
+            </div>
+          </div>
+      </div>
+    <% end %>
+  <% end %>
 
 </div>
