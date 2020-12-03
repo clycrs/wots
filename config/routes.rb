@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   # resources :casts, except: [:edit, :update] do
   #   resources :comments, only: [:create]
   # end
-  
+
   resources :minicasts, except: [:edit, :update]
 
   resources :minicasts, except: [:edit, :update, :index]
