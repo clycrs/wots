@@ -8,6 +8,10 @@ class MinicastsController < ApplicationController
     @minicast = Cast.find(params[:id])
   end
 
+  def new
+    @minicast = Cast.new
+  end
+
   def create
     @minicast = Cast.new(cast_params)
       @minicast.save
@@ -20,5 +24,7 @@ class MinicastsController < ApplicationController
   def cast_params
     params.require(:cast).permit(:title, :description, :theme)
   end
+
+
 
 end
