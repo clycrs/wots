@@ -1,11 +1,17 @@
 class MinicastsController < ApplicationController
 
-  # def index
-  #   @minicasts = Cast.minicasts
-  # end
+  def index
+    @minicasts = Cast.minicasts
+  end
 
   def show
-    @minicast = Cast.find(params[:id])
+    @minicasts         = Cast.where(format: "minicast")
+    @minicast          = @minicasts.find(params[:id])
+
+    # @index_minicast    = Cast.minicasts.index(@miniast) + 1
+
+    # @previous_minicast = Cast.minicasts[@index_minicast - 2]
+    # @next_minicast     = Cast.minicasts[@index_minicast]
   end
 
   def new
@@ -24,7 +30,4 @@ class MinicastsController < ApplicationController
   def cast_params
     params.require(:cast).permit(:title, :description, :theme)
   end
-
-
-
 end

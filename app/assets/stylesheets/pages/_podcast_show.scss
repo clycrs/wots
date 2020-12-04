@@ -1,8 +1,6 @@
 .podcast-show {
-
-  body {
-    background-color: white;
-  }
+  background: white !important;
+  min-height: 100vh;
 
   h1:after {
       height: 2px;
@@ -17,10 +15,15 @@
       color: #112938;
   }
 
+  .nav {
+    justify-content: space-around;
+    padding-top: 1.5em;
+  }
+
   .nav-link {
       color: #CFD4D7;
       opacity: .5 !important;
-
+      font-size: 20px;
   }
 
   .tab-pane {
@@ -30,10 +33,13 @@
   .nav-link.active {
     background-color: white !important;
     color: #112938 !important;
+    font-size: 20px;
+
   }
 
   .player-cover {
-
+    display: none !important;
+    min-width: 50px !important;
   }
 
   iframe {
@@ -50,4 +56,10 @@
     color: black;
   }
 
+  .wave {
+    font-size: 60px;
+    color: #112938;
+  }
+
 }
+
