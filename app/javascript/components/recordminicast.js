@@ -6,7 +6,7 @@ function handlerFunction(stream) {
   record.onclick = e => {
     console.log('I was clicked')
     record.disabled = true;
-    record.style.backgroundColor = "blue"
+    record.style.backgroundColor = "green"
     stopRecord.disabled = false;
     rec.start();
   }
@@ -26,16 +26,25 @@ function handlerFunction(stream) {
     console.log("I was clicked")
     record.disabled = false;
     stop.disabled = true;
-    record.style.backgroundColor = "red"
+    record.style.backgroundColor = "grey"
     rec.stop();
   }
 }
-function sendData(data) { console.log("data has been received") }
+
+function sendData(data) {
+  // const reader = new FileReader();
+  // reader.onload = function (event) {
+  //   const input = document.querySelector("#cast_audio")
+  //   // input.value = "minicast-audio";
+  //   input.files = [event.target.result]
+  // };
+  // reader.readAsDataURL(data);
+}
+
 
 const initAudioMinicast = () => {
   navigator.mediaDevices.getUserMedia({ audio: true })
     .then(stream => { handlerFunction(stream) })
 };
-
 
 export {initAudioMinicast};
