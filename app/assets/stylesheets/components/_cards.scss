@@ -9,6 +9,11 @@
   align-item: center;
 }
 
+.card-podcast a {
+  color: white;
+  text-decoration: none;
+}
+
 .podcast-img-container {
   width: 150px;
   position: relative;
@@ -65,7 +70,7 @@
   border-radius: 12px;
   color: white;
   margin: 20px auto
-  
+
   }
 
 .podcast-picto-container {
@@ -74,7 +79,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
+
   }
 
 .podcast-picto-img {
@@ -82,7 +87,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
+
   }
 
 
@@ -97,5 +102,5 @@
     color: white;
     margin: 20px auto;
     background-color: #6FB9C3;
-    
+
   }
