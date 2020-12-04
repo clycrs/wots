@@ -1,28 +1,30 @@
-<div class="container">
-  <h2>Bienvenue de sur le profile de <%= @user.nickname %></h2>
+<div class="container text-center">
 
-  <%= cl_image_tag @user.photo.key, alt: "alttext", class: "avatar" %>
-  <%= @user.description %>
-
+   
+  <%= cl_image_tag @user.photo.key, alt: "alttext", class: "avatar-large" %>
   
-  <h3>Ses enregistrements</h3>
+  <div class="description">
+  <div class ="paragraphe-profile"><%= @user.description %></div>
+  </div>
 
-  <div class="register list">
-    <div class="row">
-      <% @minicasts.each do |minicast| %>
-      <div class="cards-minicast" >        
-        <%= cl_image_tag "components/play.svg", alt: "alttext", class: "card-img" %>
-        <div class="card-body">
-        <%= minicast.category %>
-        <%= minicast.name %>
-        <%= %>
-        
-        </div>
+  <div class="subtitle-profile">Ses Minicasts</h3>
+
+    <%# <div class="register list">
+      <div class="row"> %>
+        <% @minicasts.each do |minicast| %>
+          <%= link_to minicast_path(minicast) do %>
+            <div class="card-minicast" > 
+              
+                <div class="podcast-picto-container">          
+                  <%= image_tag "components/microphone.svg", size: "25x25", class: "podcast-picto-img" %> 
+                </div>     
+                <div class="minicast-card-title">
+                  <%=minicast.title%>
+                </div> 
+                          
+            </div>   
+          <%end%>
         <%end%>
-      </div>
-     <%end%>
-    </div>
+    
   </div>
 </div>
- 
-  

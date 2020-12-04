@@ -4,13 +4,13 @@
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs rounded">
+  <div class="minicastform">
      <%= f.input :first_name,
                 required: true,
                 autofocus: true,
                 placeholder: "bob",
                 input_html: { autocomplete: "Prénom" }%>
-    <div class="form-inputs">
+    <div class="minicastform">
     <%= f.input :last_name,
               required: true,
               autofocus: true,
