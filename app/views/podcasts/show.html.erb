@@ -6,7 +6,7 @@
 
     <p style= "color:black"> par l'équipe Women of the Seas </p>
 
-    <div>
+    <div class="d-flex">
       <button type="button" class="btn btn-default" aria-label="Left Align">
         <%= link_to "↜", podcast_path(@previous_podcast), class: "wave" %>
         <%# if @previous_podcast = 0 %>
@@ -41,4 +41,3 @@
     <iframe src=<%= @podcast.url %> frameBorder="0" width="100%" height="110px" allow="autoplay"></iframe>
 
   </div>
-
