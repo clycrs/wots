@@ -1,24 +1,28 @@
 <body class="newminicast">
 
-  <h2>Record</h2>
-    <p>
-      <button id=record></button>
-      <button id=stopRecord disabled>Stop</button>
-    </p>
-    <p>
-      <audio id=recordedAudio></audio>
-    </p>
+  <div class="micro-record">
+    <%= image_tag "components/microphone.svg", size: "80x80" %>
+  </div>
 
-    <%= simple_form_for @minicast, url: minicasts_path do |f| %>
-      <div class = "minicastform">
-          <%= f.input :title, label: "Titre du podcast", placeholder: "Spots à Belle-île-en-mer" %>
-          <%= f.input :description, label: "Description", placeholder: "Je vous partage mes meilleurs spots" %>
-          <%= f.association :sub_categories, label: "Thèmes" %>
-      </div>
-      <div class="form-actions">
-        <%= f.button :submit, "SAUVEGARDER", class: "btn btn-newminicast" %>
-        <%= link_to profiles_path%>
-      </div>
-    <% end %>
+  <p>
+    <button id=record><%= image_tag "components/play.svg", size: "20x20" %></button>
+    <button id=stopRecord disabled><%= image_tag "components/stop.svg", size: "20x20" %></button>
+  </p>
+  <p>
+    <audio id=recordedAudio></audio>
+  </p>
+
+  <%= simple_form_for @minicast, url: minicasts_path do |f| %>
+    <div class = "minicastform">
+        <%= f.input :title, label: "Titre du podcast", placeholder: "Spots à Belle-île-en-mer" %>
+        <%= f.input :description, label: "Description", placeholder: "Je vous partage mes meilleurs spots" %>
+        <%= f.input :localisation, label: "Localisation", placeholder: "Belle-île-en-Mer" %>
+        <%= f.association :sub_categories, label: "Thèmes" %>
+        <%= f.input :audio, as: :file %>
+    </div>
+    <div class="form-actions">
+      <%= f.button :submit, "SAUVEGARDER", class: "btn-master" %>
+    </div>
+  <% end %>
 
  </body>

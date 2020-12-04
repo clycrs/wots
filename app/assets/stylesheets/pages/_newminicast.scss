@@ -1,9 +1,7 @@
-.btn-newminicast {
-  background-color: #6FB9C3;
-  border-radius: 50px ;
-  margin: 10px;
-  width: 50%;
-  color: white;
+.micro-record {
+  border-color:white;
+  margin: 40px auto;
+  margin-left: 230px;
 }
 
 .new_cast {
@@ -14,12 +12,12 @@
   input {
   color: white;
   background-color: transparent;
-  border-radius: 50px ;
+  border-radius: 20px ;
   }
   textarea {
     color: white;
     background-color: transparent;
-    border-radius: 30px ;
+    border-radius: 20px ;
   }
   select {
     color: white;
@@ -29,7 +27,7 @@
 }
 
 #record {
-    background-color:#112938; /* Green */
+    background-color:#112938;
     border-width: medium;
     border-color:  white;
     color: white;
@@ -43,11 +41,10 @@
     max-width: 50%;
     max-height: 15%;
     border-radius: 50%;
-
     position: relative;
 }
 #stopRecord {
-  background-color: #6FB9C3; /* Green */
+  background-color: #6FB9C3;
   border-width: medium;
   border-color:  white;
   color: white;
@@ -65,7 +62,5 @@
 }
 
 #recordedAudio {
-  left: 100px;
-  right: 100px;
   position: relative;
 }

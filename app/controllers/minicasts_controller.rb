@@ -14,15 +14,18 @@ class MinicastsController < ApplicationController
 
   def create
     @minicast = Cast.new(cast_params)
-      @minicast.save
-    # redirect_to profile_path
+    @minicast.user = current_user
+    @minicast.published_date = Date.today
+    @minicast.format = "minicast"
+    @minicast.save!
+    redirect_to profile_path
     # else
     #   render "new"
     # end
   end
 
   def cast_params
-    params.require(:cast).permit(:title, :description, :theme)
+    params.require(:cast).permit(:title, :description, :localisation, :theme, :sub_category_ids, :audio)
   end
 
 
