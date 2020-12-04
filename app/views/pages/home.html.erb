@@ -27,17 +27,19 @@
   <% @podcasts.limit(5).each do |podcast| %>
     <%= link_to podcast_path(podcast) do %>
     <div class="card-podcast">
-        <%= cl_image_tag podcast.photo.key, alt: "illustration", class: "podcast-img-container" %>
-          <div class="card-txts">
-            <div class="citation-card">
-              <p><%= podcast.title %></p>
-            </div>
-            <div class="signature">
-              <p><%= podcast.portrait.title %></p>
-            </div>
-          </div>
+      <div class="podcast-img-container">
+        <%= image_tag "components/play-card-podcast.svg", class: "play-btn" %>
+        <%= cl_image_tag podcast.photo.key, class: "podcast-img-illu" %>
       </div>
+      <div class="card-txts">
+        <div class="citation-card">
+          <p><%= podcast.title %></p>
+        </div>
+        <div class="signature">
+          <p><%= podcast.portrait.title %></p>
+        </div>
+      </div>
+    </div>
     <% end %>
   <% end %>
-
 </div>
