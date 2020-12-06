@@ -2,6 +2,13 @@
   background: white !important;
   min-height: 100vh;
 
+.podcast-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 120px;
+}
+
   h1:after {
       height: 2px;
       display: block;
@@ -16,25 +23,26 @@
   }
 
   .nav {
-    justify-content: space-around;
+    justify-content: center;
     padding-top: 1.5em;
   }
 
   .nav-link {
-      color: #CFD4D7;
-      opacity: .5 !important;
-      font-size: 20px;
+    color: $blue-medium;
+    opacity: 1 !important;
+    font-size: 20px;
   }
 
   .tab-pane {
-      color: #112938;
+    color: #112938;
   }
 
   .nav-link.active {
+    font-weight: bolder;
+    height: 20px;
     background-color: white !important;
     color: #112938 !important;
     font-size: 20px;
-
   }
 
   .player-cover {
@@ -59,6 +67,10 @@
   .wave {
     font-size: 60px;
     color: #112938;
+  }
+
+  #pills-home {
+    margin: 0 auto;
   }
 
 }
