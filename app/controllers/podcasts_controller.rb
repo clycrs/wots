@@ -9,7 +9,7 @@ class PodcastsController < ApplicationController
 
     @index_podcast    = Cast.podcasts.index(@podcast) + 1
 
-    @previous_podcast = Cast.podcasts[@index_podcast - 2]
-    @next_podcast     = Cast.podcasts[@index_podcast]
+    @previous_podcast = Cast.podcasts[@index_podcast - 2] || Cast.last
+    @next_podcast     = Cast.podcasts[@index_podcast] || Cast.first
   end
 end
