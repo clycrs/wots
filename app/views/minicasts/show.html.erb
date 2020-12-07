@@ -1,12 +1,21 @@
 
-<div class="container podcast-show text-center" id="show-container">
+<div class="container minicast-show text-center" id="show-container">
 
-<h2><%= @minicast.title %></h2>
+  <h2><%= @minicast.title %></h2>
+  <p> par <%= @minicast.user.first_name %></p>
 
-  <p style= "color:black"> par <%= @minicast.user.first_name %></p>
+  <div class="d-flex justify-content-center mt-3 mb-3">
+      <button type="button" class="btn btn-default" aria-label="Left Align">
+        <%= link_to "◀", class: "wave" %>
+        <span class= "glyphicon glyphicon-triangle-left" aria-hidden="true"></span>
+      </button>
 
-  <div>
-    <%= image_tag "components/microphone.svg", size: "120x120" %> 
+      <%= image_tag "Microminicasts.png", width: 350, height: 300, crop: :fill %> 
+
+      <button type="button" class="btn btn-default" aria-label="Left Align">
+        <%= link_to "▶", class: "wave"%>
+        <span class= "glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+      </button>
   </div>
 
   <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
