@@ -1,9 +1,28 @@
 <div>
-  <h2>Trouver une aventure</h2>
+  <h2>Ecouter une aventure</h2>
+
+  <div class="d-flex justify-content-center mt-5 mb-5">
+    <p class="paragraphe-switch">Carte</p>
+    <label class="switch">
+      <input type="checkbox" onclick="hideFilter()">
+      <span class="slider round"></span>
+    </label>
+    <p class="paragraphe-switch">Thèmes</p>
+  </div>
 
   <div id="map"
    data-markers="<%= @markers.to_json %>"
    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
+
+  <div id="list-themes">
+    <ul>
+      <li>Theme</li>
+      <li>Theme</li>
+      <li>Theme</li>
+      <li>Theme</li>
+      <li>Theme</li>
+    </ul>
   </div>
 
 
@@ -32,14 +51,25 @@
         <%= cl_image_tag podcast.photo.key, class: "podcast-img-illu" %>
       </div>
       <div class="card-txts">
-        <div class="citation-card">
-          <p><%= podcast.title %></p>
-        </div>
         <div class="signature">
           <p><%= podcast.portrait.title %></p>
+        </div>
+        <div class="citation-card">
+          <p><%= podcast.title %></p>
         </div>
       </div>
     </div>
     <% end %>
   <% end %>
 </div>
+
+<script>
+  const hideFilter() => {
+    const filter = document.getElementById("list-themes");
+      if (filter.style.display === "none") {
+        filter.style.display = "block";
+      } else {
+        filter.style.display = "none";
+      };
+    };
+</script>
