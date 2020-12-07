@@ -1,0 +1,19 @@
+<div id="map"
+ data-markers="<%= @markers.to_json %>"
+ data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+</div>
+
+<div class="legends-container">
+  <div class="legend-details">
+    <div class="legend-img">
+      <%= image_tag "components/w.svg", size: "26x26" %>
+    </div>
+    <p class="legend-txt">Podcasts</p>
+  </div>
+  <div class="legend-details">
+    <div class="legend-img">
+     <%= image_tag "components/microphone.svg", size: "25x25" %>
+    </div>
+    <p class="legend-txt">Minicasts</p>
+  </div>
+</div>

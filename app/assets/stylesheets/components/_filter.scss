@@ -1,0 +1,95 @@
+#menu {
+  list-style-type:none;
+  margin:0;
+  padding:0;
+  position: absolute;
+}
+/* Création de lia liste horizontale avec espacement */
+.sub_categorie {
+  display:inline-block;
+  float: left;
+  margin-right: 1px;
+}
+/* Style des liens a de la liste */
+.sub_categorie .link_sub_categorie {
+  display:block;
+  min-width:140px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #fff;
+  background: #555555;
+  text-decoration: none;
+}
+/* Changement de couleur sur les liens au survol */
+.sub_categorie:hover .link_sub_categorie {
+  background: #167FFB;
+}
+/* Style des sous-liens */
+.sub_categorie .menu .link_sub_categorie {
+  background: #ddd;
+  color: #112938;
+  height: 40px;
+  line-height: 40px;
+}
+/* Style des sous-liens survolés */
+.sub_categorie:hover .menu .link_sub_categorie:hover {
+  background: #167FFB;
+  color: #fff;
+}
+/* Masquer les liens déroulants jusqu'à ce qu'ils soient nécessaires */
+.sub_categorie .menu {
+  display: none;
+}
+/* Rendre les liens déroulants verticaux */
+.sub_categorie .menu  {
+  display: block;
+  float: none;
+}
+// /* Empêcher l'écriture de texte */
+// li ul li a {
+//   width: auto;
+//   min-width: 100px;
+//   padding: 0 20px;
+// }
+/* Afficher le menu déroulant au survol */
+.menu .sub_categorie a:hover + .hidden, .hidden:hover {
+  display: block;
+}
+/*Style du bouton 'show menu' + le masquer */
+.show-menu-un {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  color: #fff;
+  background-image: url('../../db/fixtures/categories/boat.png');
+  text-align: center;
+  padding: 10px 0;
+  display: none;
+}
+.show-menu-deux {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  color: #fff;
+  background-image: url('../../db/fixtures/categories/diver.png');
+  text-align: center;
+  padding: 10px 0;
+  display: none;
+}
+.show-menu-trois {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  color: #fff;
+  background-image: url('../../../db/fixtures/categories/compass.png');
+  text-align: center;
+  padding: 10px 0;
+  display: none;
+}
+/* Masquer la checkbox */
+input[type=checkbox]{
+    display: none;
+}
+/* Afficher le menu lorsque la case à cocher invisible est cochée = click sur le le menu en responsive*/
+input[type=checkbox]:checked ~ #menu{
+    display: block;
+}
