@@ -1,6 +1,13 @@
 .micro-record {
-  border-color:white;
+  border: 5px solid #6FB9C3;
   margin: 40px auto;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+
+.micro-record img {
+      margin-top:20%;
 }
 
 .new_cast {
@@ -63,3 +70,5 @@
 #recordedAudio {
   position: relative;
 }
+
+abbr { display:none; }

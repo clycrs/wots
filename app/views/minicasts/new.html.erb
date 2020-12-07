@@ -5,7 +5,7 @@
   </div>
 
   <div class="record">
-    <button id=record><%= image_tag "components/play.svg", size: "20x20" %></button>
+    <button id=record><%= image_tag "components/record.svg" , size: "20x20"%></button>
     <button id=stopRecord disabled><%= image_tag "components/stop.svg", size: "20x20" %></button>
   </div>
     <audio id=recordedAudio></audio>
@@ -16,7 +16,7 @@
         <%= f.input :description, label: "Description", placeholder: "Je vous partage mes meilleurs spots" %>
         <%= f.input :localisation, label: "Localisation", placeholder: "Belle-île-en-Mer" %>
         <%= f.association :sub_categories, label: "Thèmes" %>
-        <%= f.input :audio, as: :file %>
+        <%= f.input :audio, as: :hidden %>
     </div>
     <div class="form-actions">
       <%= f.button :submit, "SAUVEGARDER", class: "btn-master" %>
