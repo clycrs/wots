@@ -6,7 +6,7 @@ function handlerFunction(stream) {
   record.onclick = e => {
     console.log('I was clicked')
     record.disabled = true;
-    record.style.backgroundColor = "white"
+    record.style.backgroundColor = "#EBF8FF"
     stopRecord.disabled = false;
     rec.start();
   }
@@ -26,7 +26,7 @@ function handlerFunction(stream) {
     console.log("I was clicked")
     record.disabled = false;
     stop.disabled = true;
-    record.style.backgroundColor = "grey"
+    record.style.backgroundColor = "#6FB9C3"
     rec.stop();
   }
 }

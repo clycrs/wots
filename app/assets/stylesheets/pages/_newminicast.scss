@@ -7,7 +7,7 @@
 }
 
 .micro-record img {
-      margin-top:20%;
+  margin-top:20%;
 }
 
 .new_cast {
@@ -42,7 +42,7 @@
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 4px 2px;
+    margin: 4px 15px;
     cursor: pointer;
     max-width: 50%;
     max-height: 15%;
@@ -59,7 +59,7 @@
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
+  margin: 4px 15px;
   cursor: pointer;
   max-width: 50%;
   max-height: 15%;
@@ -69,6 +69,10 @@
 
 #recordedAudio {
   position: relative;
+}
+
+.record-bouton {
+  margin-bottom :20px;
 }
 
 abbr { display:none; }
