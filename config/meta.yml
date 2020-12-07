@@ -1,0 +1,5 @@
+meta_product_name: "WOTS"
+meta_title: "WOTS - Women of the seas, l'application pour les aventurières de la mer"
+meta_description: "L'application audio pour les aventurières de la mer"
+meta_image: "Logo-white_hor-temp.png" # should exist in `app/assets/images/`
+twitter_account: "@product_twitter_account"   # required for Twitter Cards
