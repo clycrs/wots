@@ -161,7 +161,7 @@ episode_6 = Cast.new(
   format: "podcast",
   title: "'Pris dans les glaces'",
   description: "Marion Lauters – Étudiante/Intendante embarquée sur la dérive Arctique de la goélette Tara",
-  localisation: "pôle Nord",
+  localisation: "Svalbard",
   published_date: "13/08/2020",
   user: maxine,
   url: "https://player.acast.com/5edf99be4121551c7d2a446a/episodes/episode-06-pris-dans-la-glace?theme=default&cover=1&latest=1"
