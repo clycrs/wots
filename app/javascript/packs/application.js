@@ -27,6 +27,7 @@ require("channels")
 import "bootstrap";
 import { initMapbox } from '../plugins/init_mapbox';
 import { initAudioMinicast } from '../components/recordminicast';
+import { initSwitch } from '../components/switch';
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -34,4 +35,5 @@ import { initAudioMinicast } from '../components/recordminicast';
 document.addEventListener('turbolinks:load', () => {
   initMapbox();
   initAudioMinicast();
+  initSwitch();
 });

@@ -45,6 +45,13 @@
   justify-content: flex-start;
 }
 
+.signature p {
+  font-family: $futura-medium;
+  font-size: 20px;
+  display: flex;
+  justify-content: flex-start;
+}
+
 .citation-card p {
   font-size: 18px;
   line-height: 20px;
