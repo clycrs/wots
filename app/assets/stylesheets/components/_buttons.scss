@@ -1,11 +1,26 @@
 .btn-master {
-  font-size: 16px;
+  font-size: 18px;
   // padding: 20px 30px;
   background-color: #6FB9C3;
   border-radius: 50px ;
   margin: 20px auto;
   width: 50%;
   color: white;
+}
+
+.btn-filter {
+  font-size: 18px;
+  padding: 20px 30px;
+  background-color: #6FB9C3;
+  border-radius: 50px ;
+  margin: 20px auto;
+  width: 50%;
+  color: white;
+  z-index: 5;
+  position: relative;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .btn-record {
