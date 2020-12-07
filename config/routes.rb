@@ -9,13 +9,11 @@ Rails.application.routes.draw do
   #   resources :comments, only: [:create]
   # end
 
-  resources :minicasts, except: [:edit, :update]
-
   resources :minicasts, except: [:edit, :update, :index]
 
   resources :podcasts, only: [:show, :index]
 
-  resources :casts, only: [] do
+  resources :casts, only: [:index] do
     resources :comments, only: [:create], on: :member
   end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
