@@ -1,0 +1,27 @@
+<div class="container">
+  <h2>Les podcasts <br> Women of the Seas</h2>
+
+  <% @podcasts.each do |podcast| %>
+    <%= link_to podcast_path(podcast) do %>
+    <div class="card-podcast">
+      <div class="podcast-img-container">
+        <%= image_tag "components/play-card-podcast.svg", class: "play-btn" %>
+        <%= cl_image_tag podcast.photo.key, class: "podcast-img-illu" %>
+      </div>
+      <div class="card-txts">
+        <div class="signature">
+          <p><%= podcast.portrait.title %></p>
+        </div>
+        <div class="citation-card">
+          <p><%= podcast.title %></p>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  <% end %>
+  <!-- <div class="filter-container">
+    <a href="" class="btn-filter">filtrer</a>
+  </div>
+</div>
+  <div class="footer-abyss">
+  </div> -->
