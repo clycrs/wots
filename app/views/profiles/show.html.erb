@@ -23,18 +23,23 @@
     <div class="subtitle-profile">Mes Minicasts</h3>
 
     <% @minicasts.each do |minicast| %>
-         <%= link_to minicast_path(minicast) do%>
-            <div class="card-minicast" >
-
+        <%= link_to minicast_path(minicast) do%>
+          <div class="card-with-delete">
+            <div class="card-minicast" id="card-for-delete">
                 <div class="podcast-picto-container">
                   <%= image_tag "components/microphone.svg", size: "25x25", class: "podcast-picto-img" %>
                 </div>
                 <div class="minicast-card-title">
                   <%=minicast.title%>
                 </div>
-
             </div>
-          <%end%>
+
+            <div class="delete-minicast">
+              <%= link_to image_tag("components/delete.svg", size: "15x15"), minicast_path(minicast), method: :delete, data: { confirm: "Etes-vous sûr de le supprimer?" } %>
+            </div>
+          </div>
+
         <%end%>
+    <%end%>
   </div>
 </div>
