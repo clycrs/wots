@@ -1,7 +1,8 @@
 .podcast-show {
   min-height: 100vh;
-  background-image: url("grands_podcasts.png");
-  background-size: 100% 100%;
+  background-image: asset-url("grands_podcasts.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
 
   .podcast-header {
     flex-direction: column;
