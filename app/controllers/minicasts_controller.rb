@@ -32,6 +32,15 @@ class MinicastsController < ApplicationController
     redirect_to profile_path
   end
 
+  # def destroy
+  #   @minicasts = Cast.where(format: "minicast")
+  #   @minicast = @minicasts.find(params[:id])
+  #   @minicast.destroy
+  #   redirect_to profile_path
+  # end
+
+  private
+
   def cast_params
     params.require(:cast).permit(:title, :description, :localisation, :theme, :sub_category_ids, :audio)
   end
