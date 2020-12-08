@@ -1,95 +1,158 @@
-#menu {
-  list-style-type:none;
-  margin:0;
-  padding:0;
-  position: absolute;
+
+
+.menu-container {
+ width:80%;
+ margin-top:32px;
+ color: white;
+ margin-left: 50px;
 }
-/* Création de lia liste horizontale avec espacement */
-.sub_categorie {
-  display:inline-block;
-  float: left;
-  margin-right: 1px;
+
+.category1 {
+  text-align:left;
+  padding:24px;
+  display:flex;
+  margin-bottom:24px;
+  justify-content:space-between;
+  background-image:linear-gradient(rgba(17,41,56,0.4),rgba(17,41,56,0.4)), url(image_path("components/categories/boat.jpg"));
+  background-position: 0px 150px;
+  object-fit: cover;  
+  border-radius: 12px;
+  
 }
-/* Style des liens a de la liste */
-.sub_categorie .link_sub_categorie {
-  display:block;
-  min-width:140px;
-  height: 50px;
-  text-align: center;
-  line-height: 50px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #fff;
-  background: #555555;
-  text-decoration: none;
+
+.category2 {
+ 
+  text-align:left;
+  padding:24px;
+  display:flex;
+  margin-bottom:24px;
+  justify-content:space-between;
+  background-image:linear-gradient(rgba(17,41,56,0.4),rgba(17,41,56,0.4)), url(image_path("components/categories/diver.jpg"));
+  background-position: 0px 300px;
+  object-fit: cover;
+  border-radius: 12px;
+ }
+
+.category3 { 
+  text-align:left;
+  padding:24px;
+  display:flex;
+  margin-bottom:24px;
+  justify-content:space-between;
+  background-image:linear-gradient(rgba(17,41,56,0.4),rgba(17,41,56,0.4)), url(image_path("components/categories/compass.jpg"));
+  filter: bluescale(100%);
+  background-position: 0px 200px;
+  object-fit: cover;
+  border-radius: 12px;
+
 }
-/* Changement de couleur sur les liens au survol */
-.sub_categorie:hover .link_sub_categorie {
-  background: #167FFB;
+
+.category-title {
+  color: white;
+  
 }
-/* Style des sous-liens */
-.sub_categorie .menu .link_sub_categorie {
-  background: #ddd;
-  color: #112938;
-  height: 40px;
-  line-height: 40px;
+
+.content ul {
+ list-style:none;
+ padding-left:0;
+ text-align:left;
+ padding:32px;
+ font-size: 24px;
 }
-/* Style des sous-liens survolés */
-.sub_categorie:hover .menu .link_sub_categorie:hover {
-  background: #167FFB;
-  color: #fff;
+
+.content ul li {
+ margin-bottom:16px;
 }
-/* Masquer les liens déroulants jusqu'à ce qu'ils soient nécessaires */
-.sub_categorie .menu {
-  display: none;
+
+.hidden {
+ display:none;
 }
-/* Rendre les liens déroulants verticaux */
-.sub_categorie .menu  {
-  display: block;
-  float: none;
-}
-// /* Empêcher l'écriture de texte */
-// li ul li a {
-//   width: auto;
-//   min-width: 100px;
-//   padding: 0 20px;
+
+
+
+// .nav {
+//   transition: all 0.5s;
+//   display:flex;
+//   flex-direction:column;
+//   width:350px;
 // }
-/* Afficher le menu déroulant au survol */
-.menu .sub_categorie a:hover + .hidden, .hidden:hover {
-  display: block;
-}
-/*Style du bouton 'show menu' + le masquer */
-.show-menu-un {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-decoration: none;
-  color: #fff;
-  background-image: url('../../db/fixtures/categories/boat.png');
-  text-align: center;
-  padding: 10px 0;
-  display: none;
-}
-.show-menu-deux {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-decoration: none;
-  color: #fff;
-  background-image: url('../../db/fixtures/categories/diver.png');
-  text-align: center;
-  padding: 10px 0;
-  display: none;
-}
-.show-menu-trois {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-decoration: none;
-  color: #fff;
-  background-image: url('../../../db/fixtures/categories/compass.png');
-  text-align: center;
-  padding: 10px 0;
-  display: none;
-}
-/* Masquer la checkbox */
-input[type=checkbox]{
-    display: none;
-}
-/* Afficher le menu lorsque la case à cocher invisible est cochée = click sur le le menu en responsive*/
-input[type=checkbox]:checked ~ #menu{
-    display: block;
-}
+
+// .nav .open .dropdown-menu {
+//   position: relative;
+//   left: 0;
+//   width: 100%;
+//   margin-top: 0;
+//   background-color: #112938;
+//   border: 0;
+//   -webkit-box-shadow: none;
+//   box-shadow: none;
+//   color: white !important;
+
+// }
+
+// // .dropdown-un {
+// //   background-image: url(image_path("components/categories/boat.jpg"));
+// //   background-position: 0px 100px;
+// //   object-fit: cover;
+// //   background-size:cover;  
+// //   border-radius:4px;
+  
+  
+// // }
+
+// // .dropdown-deux {
+// //   background-image: url(image_path("components/categories/diver.jpg"));
+// //   background-position: 0px 200px;
+// //   object-fit: cover;
+// //   background-size:cover; 
+// //   border-radius:4px;
+// //   margin-top: 30px;
+  
+// // }
+
+// // .dropdown-trois {
+// //   background-image: url(image_path("components/categories/compass.jpg"));
+// //   background-position: 0px 150px;
+// //   object-fit: cover;
+// //   background-size:cover;
+// //   border-radius:4px;
+// //   margin-top: 30px;
+// //   margin-bottom: 30px;
+  
+// // }
+
+// // .content-dropdown {
+// //   color: white;
+// // }
+
+// // .nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
+// //   background-color:transparent;
+// // }
+
+// // .nav>li>a:focus, .nav>li>a:hover {
+// //   background-color:transparent;
+// // }
+
+
+// // element.style {
+// // }
+// // .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+// //   color: white;
+// //   text-decoration: none;
+// //   background-color: transparent;
+// // }
+  
+  
+// // .content-dropdown {
+// //   display:flex;
+// //   justify-content:space-between;
+// // }
+
+// // .title-left {
+// //   font-family: $futura-book;
+// //   color: white;
+// //   font-weight: 500;
+// //   font-size: 20px;
+// //   line-height: 31px; 
+
+// // }
