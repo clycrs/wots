@@ -1,5 +1,6 @@
 <div>
   <h2>Ecouter une aventure</h2>
+
   <div class="spacer d-flex justify-content-center"></div>
   <div class="d-flex justify-content-center mt-5 mb-5">
     <p class="paragraphe-switch">Carte</p>
@@ -19,7 +20,7 @@
   </div>
 
   <h2>Les plus écoutés</h2>
-  <div class="spacer"></div>
+
   <% @podcasts.limit(5).each do |podcast| %>
     <%= link_to podcast_path(podcast) do %>
     <div class="card-podcast">
