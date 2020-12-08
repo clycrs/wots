@@ -7,7 +7,7 @@
   .podcast-header {
     flex-direction: column;
     justify-content: center;
-    margin-top: 20px;
+    padding-top: 20px;
 
     p {
       font-size: 20px;
@@ -42,7 +42,7 @@
   }
 
   .tab-content {
-    margin: 0 50px 160px 50px;
+    margin: 0 20px 160px 20px;
     font-family: $futura-book;
   }
 
@@ -89,6 +89,11 @@
 
   #pills-home {
     margin: 0 auto;
+  }
+
+  .podcast-placeholder img {
+    width:70%;
+    height:auto;
   }
 
 }

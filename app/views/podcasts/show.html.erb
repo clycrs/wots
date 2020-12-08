@@ -1,4 +1,4 @@
-
+<body style="background-color:white;">
   <div class="container podcast-show text-center" id="show-container">
     <div class="podcast-header">
       <p class= "index_podcast">#<%= @index_podcast %></p>
@@ -6,7 +6,7 @@
       <p> par l'équipe Women of the Seas </p>
     </div>
 
-    <div class="d-flex justify-content-center mt-3 mb-3">
+    <div class="d-flex justify-content-center mt-3 mb-3 podcast-placeholder">
       <button type="button" class="btn btn-default" aria-label="Left Align">
         <%= link_to "◀", podcast_path(@previous_podcast), class: "wave" %>
         <span class= "glyphicon glyphicon-triangle-left" aria-hidden="true"></span>
@@ -37,3 +37,4 @@
     <iframe src=<%= @podcast.url %> frameBorder=0 width="100%" height="110px" allow="autoplay"></iframe>
 
   </div>
+</body>

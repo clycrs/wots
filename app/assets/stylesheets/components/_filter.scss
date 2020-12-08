@@ -1,10 +1,8 @@
 
 
 .menu-container {
- width:80%;
- margin-top:32px;
+ margin: 32px 20px 0px 20px;
  color: white;
- margin-left: 50px;
 }
 
 .category1 {
@@ -15,13 +13,13 @@
   justify-content:space-between;
   background-image:linear-gradient(rgba(17,41,56,0.4),rgba(17,41,56,0.4)), url(image_path("components/categories/boat.jpg"));
   background-position: 0px 150px;
-  object-fit: cover;  
+  object-fit: cover;
   border-radius: 12px;
-  
+
 }
 
 .category2 {
- 
+
   text-align:left;
   padding:24px;
   display:flex;
@@ -33,7 +31,7 @@
   border-radius: 12px;
  }
 
-.category3 { 
+.category3 {
   text-align:left;
   padding:24px;
   display:flex;
@@ -49,7 +47,7 @@
 
 .category-title {
   color: white;
-  
+
 }
 
 .content ul {
@@ -94,20 +92,20 @@
 // //   background-image: url(image_path("components/categories/boat.jpg"));
 // //   background-position: 0px 100px;
 // //   object-fit: cover;
-// //   background-size:cover;  
+// //   background-size:cover;
 // //   border-radius:4px;
-  
-  
+
+
 // // }
 
 // // .dropdown-deux {
 // //   background-image: url(image_path("components/categories/diver.jpg"));
 // //   background-position: 0px 200px;
 // //   object-fit: cover;
-// //   background-size:cover; 
+// //   background-size:cover;
 // //   border-radius:4px;
 // //   margin-top: 30px;
-  
+
 // // }
 
 // // .dropdown-trois {
@@ -118,7 +116,7 @@
 // //   border-radius:4px;
 // //   margin-top: 30px;
 // //   margin-bottom: 30px;
-  
+
 // // }
 
 // // .content-dropdown {
@@ -141,8 +139,8 @@
 // //   text-decoration: none;
 // //   background-color: transparent;
 // // }
-  
-  
+
+
 // // .content-dropdown {
 // //   display:flex;
 // //   justify-content:space-between;
@@ -153,6 +151,6 @@
 // //   color: white;
 // //   font-weight: 500;
 // //   font-size: 20px;
-// //   line-height: 31px; 
+// //   line-height: 31px;
 
 // // }

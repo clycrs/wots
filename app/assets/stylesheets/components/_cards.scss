@@ -1,12 +1,11 @@
 /* Card Podcast */
 
 .card-podcast {
-  width: 80%;
-  height: 86px;
   margin: 20px auto;
   display: flex;
   justify-content: flex-start;
   align-item: center;
+  width: 90%;
 }
 
 .card-podcast a {
@@ -15,15 +14,14 @@
 }
 
 .podcast-img-container {
-  width: 150px;
   position: relative;
   margin-right: 20px;
 
 }
 
 .podcast-img-illu {
-  width: 150px;
-  height: 86px;
+  width: 90px;
+  height: 90px;
   border-radius: 12px;
   object-fit: cover;
 }
@@ -54,7 +52,7 @@
 
 .citation-card p {
   font-size: 18px;
-  line-height: 20px;
+  line-height: 24px;
   text-align: left;
   margin: 0;
 }
@@ -63,8 +61,8 @@
   width: 35px;
   height: 35px;
   position: absolute;
-  top: 28px;
-  left: 60px;
+  top: 30px;
+  left: 28px;
   z-index: 2;
 }
 
@@ -93,6 +91,7 @@
 
 .podcast-picto-img {
   width: 60px;
+  margin-top: -6px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -102,14 +101,13 @@
 
 
   .card-register {
-    width: 60%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     border: 1px solid $blue-medium;
     border-radius: 40px;
     color: white;
-    margin: 20px auto;
+    margin: 20px 10%;
     background-color: #6FB9C3;
 
   }
