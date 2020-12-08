@@ -1,76 +1,64 @@
+
 <div class="container">
-<div class="category-title">
-  <h4>Sélectionner un thème</h4>
-</div>
-  <div class="menu-container">
-    
-    <div class="category1" id="cat-1">
+
+  <div class="category-title">
+    <h4>Sélectionner un thème</h4>
+  </div>
+    <div class="menu-container">
+      <% Category.all.each do |category| %>
+        <%if category.title == "Mes navigations en..."%>
+          <div class="category1" id="cat-1">            
+            <div class="category-title">
+              <h4><%= category.title %></h4>             
+            </div>
+            <div class="controls" id="controls-1">        
+            </div>
+          </div>
+          <div class="content hidden" id="content-1">
+            <ul>
+              <% category.sub_categories.each do |sub_category| %>
+              <li><%= link_to "#{sub_category.title}", casts_path(sub_category_id: sub_category.id) %></li>
+              <% end %>       
+            </ul>
+          </div>
+        <%elsif category.title == "Mes bons plans..."%>
+          <div class="category2" id="cat-2">
+            
+            <div class="category-title">
+              <h4><%= category.title %></h4>             
+            </div>
+            <div class="controls" id="controls-2">        
+            </div>
+          </div>
+          <div class="content hidden" id="content-2">
+            <ul>
+              <% category.sub_categories.each do |sub_category| %>
+              <li><%= link_to "#{sub_category.title}", casts_path(sub_category_id: sub_category.id) %></li>
+              <% end %>       
+            </ul>
+          </div>
+
+        <%elsif category.title == "Mes histoires de..."%>
+          <div class="category3" id="cat-3">
+            
+            <div class="category-title">
+              <h4><%= category.title %></h4>             
+            </div>
+            <div class="controls" id="controls-3">        
+            </div>
+          </div>
+          <div class="content hidden" id="content-3">
+            <ul>
+              <% category.sub_categories.each do |sub_category| %>
+              <li><%= link_to "#{sub_category.title}", casts_path(sub_category_id: sub_category.id) %></li>
+              <% end %>       
+            </ul>
+          </div>
+
+        <%end%>
+      <%end%>   
       
-      <div class="category-title">
-        <h4>Mes navigations en...</h4>
-             
-      </div>
-      <div class="controls" id="controls-1">
-        
-      </div>
-    </div>
-   <div class="content hidden" id="content-1">
-      <ul>
-        <li><a href="#">Voilier</a></li>
-        <li><a href="#">Navire marchand</a></li>
-        <li><a href="#">Pêche</a></li>
-        <li><a href="#">Défense</a></li>
-        <li><a href="#">Plongée</a></li>
-        <li><a href="#">Glisse</a></li>
-      </ul>
-   
-    </div>
-    
-    <div class="category2" id="cat-2">
-      <div class="category-title">
-        <h4>Mes bons plans...</h4>
-               
-      </div>
-      <div class="controls" id="controls-2">
-        
-      </div>
-    </div>
-    <div class="content hidden" id="content-2">
-      <ul>
-      <li><a href="#">Escales & Ports</a></li>
-      <li><a href="#">Mouillages</a></li>
-      <li><a href="#">Bourse aux équipiers</a></li>
-      <li><a href="#">Equipement & Entretien</a></li>
-      <li><a href="#">Astuces & Conseils</a></li>
-      <li><a href="#">Cuisine</a></li>
-      <li><a href="#">Formation</a></li>
-      </ul>   
-    </div>
-
-    <div class="category3" id="cat-3">
-      <div class="category-title">
-        <h4>Mes histoires de...</h4>
-              
-      </div>
-      <div class="controls" id="controls-3">
-        
-      </div>
-
-    </div>
-    <div class="content hidden" id="content-3">
-      <ul>
-        <li><a href="#">Voyages</a></li>
-        <li><a href="#">Reportages</a></li>
-        <li><a href="#">Régates & Sports</a></li>
-        <li><a href="#">Insolite</a></li>
-        <li><a href="#">Construction & Technique</a></li>
-        <li><a href="#">Sciences & Découvertes</a></li>
-        <li><a href="#">Culture</a></li>
-        <li><a href="#">Avarie & Naufrage</a></li>
-      </ul>   
-    </div>
-    
-  </div> 
+    </div> 
 </div>
 
 <script> 
@@ -96,72 +84,5 @@
   });
 </script>
   
-  <%# <ul class="nav nav-pills">
-    <!-- CAT 01 --> 
-  <li class="dropdown-un open">
-    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-      <div class="content-dropdown">
-        <div class="dropdown-left">
-          <p class="dropdown-title">Mes navigations en...</p>
-          <p class="dropdow-count"> 24 podcasts </p>
-        </div>
-        <i class="fa fa-arrow-down"></i> 
-      </div>
-    </a>
-    <!-- CONTENU 01 --> 
-    <ul class="dropdown-menu">
-      <li><a href="#">Voilier</a></li>
-      <li><a href="#">Navire marchand</a></li>
-      <li><a href="#">Pêche</a></li>
-      <li><a href="#">Défense</a></li>
-      <li><a href="#">Plongée</a></li>
-      <li><a href="#">Glisse</a></li>
-    </ul>
-  </li>
-    
-    <!-- CAT 02 --> 
-  <li class="dropdown-deux open">
-    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-      <div class="content-dropdown">
-        <div class="dropdown-left">
-          <p class="dropdown-title">Mes bons plans...</p>
-          <p class="dropdow-count"> 24 podcasts </p>
-        </div>
-        <i class="fa fa-arrow-down"></i> 
-      </div>
-    </a>
-    <ul class="dropdown-menu">
-      <li><a href="#">Escales & Ports</a></li>
-      <li><a href="#">Mouillages</a></li>
-      <li><a href="#">Bourse aux équipiers</a></li>
-      <li><a href="#">Equipement & Entretien</a></li>
-      <li><a href="#">Astuces & Conseils</a></li>
-      <li><a href="#">Cuisine</a></li>
-      <li><a href="#">Formation</a></li>
-    </ul>
-  </li>
-   <!-- CAT 03 --> 
-  <li class="dropdown-trois open">
-    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-      <div class="content-dropdown">
-        <div class="dropdown-left">
-          <p class="dropdown-title">Mes histoires de...</p>
-          <p class="dropdow-count"> 24 podcasts </p>
-        </div>
-        <i class="fa fa-arrow-down"></i> 
-      </div>
-    </a>
-    <ul class="dropdown-menu">
-     <li><a href="#">Voyages</a></li>
-      <li><a href="#">Reportages</a></li>
-      <li><a href="#">Régates & Sports</a></li>
-      <li><a href="#">Insolite</a></li>
-      <li><a href="#">Construction & Technique</a></li>
-      <li><a href="#">Sciences & Découvertes</a></li>
-      <li><a href="#">Culture</a></li>
-      <li><a href="#">Avarie & Naufrage</a></li>
-    </ul>
-  </li>
-  </ul>
-</div> %>
+  
   
