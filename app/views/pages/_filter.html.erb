@@ -1,67 +1,67 @@
 
 <div class="container">
 
-  <div class="category-title">
+  <div class="category-title text-center">
     <h4>Sélectionner un thème</h4>
   </div>
     <div class="menu-container">
       <% Category.all.each do |category| %>
         <%if category.title == "Mes navigations en..."%>
-          <div class="category1" id="cat-1">            
+          <div class="category1" id="cat-1">
             <div class="category-title">
-              <h4><%= category.title %></h4>             
+              <h4><%= category.title %></h4>
             </div>
-            <div class="controls" id="controls-1">        
+            <div class="controls" id="controls-1">
             </div>
           </div>
           <div class="content hidden" id="content-1">
             <ul>
               <% category.sub_categories.each do |sub_category| %>
               <li><%= link_to "#{sub_category.title}", casts_path(sub_category_id: sub_category.id) %></li>
-              <% end %>       
+              <% end %>
             </ul>
           </div>
         <%elsif category.title == "Mes bons plans..."%>
           <div class="category2" id="cat-2">
-            
+
             <div class="category-title">
-              <h4><%= category.title %></h4>             
+              <h4><%= category.title %></h4>
             </div>
-            <div class="controls" id="controls-2">        
+            <div class="controls" id="controls-2">
             </div>
           </div>
           <div class="content hidden" id="content-2">
             <ul>
               <% category.sub_categories.each do |sub_category| %>
               <li><%= link_to "#{sub_category.title}", casts_path(sub_category_id: sub_category.id) %></li>
-              <% end %>       
+              <% end %>
             </ul>
           </div>
 
         <%elsif category.title == "Mes histoires de..."%>
           <div class="category3" id="cat-3">
-            
+
             <div class="category-title">
-              <h4><%= category.title %></h4>             
+              <h4><%= category.title %></h4>
             </div>
-            <div class="controls" id="controls-3">        
+            <div class="controls" id="controls-3">
             </div>
           </div>
           <div class="content hidden" id="content-3">
             <ul>
               <% category.sub_categories.each do |sub_category| %>
               <li><%= link_to "#{sub_category.title}", casts_path(sub_category_id: sub_category.id) %></li>
-              <% end %>       
+              <% end %>
             </ul>
           </div>
 
         <%end%>
-      <%end%>   
-      
-    </div> 
+      <%end%>
+
+    </div>
 </div>
 
-<script> 
+<script>
   const control1 = document.getElementById('cat-1');
   const content1 = document.getElementById('content-1');
 
@@ -83,6 +83,5 @@
     content3.classList.toggle("hidden");
   });
 </script>
-  
-  
-  
+
+

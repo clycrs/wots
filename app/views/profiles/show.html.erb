@@ -1,6 +1,6 @@
 <div class="container text-center">
 
-  <div class="subtitle-profile">
+  <div class="subtitle-profile mb-5 ">
     <%= @user.first_name %>
   </div>
   <div class="image-profile">
@@ -24,7 +24,7 @@
 
 
 
-    <div class="subtitle-profile">Mes Minicasts</h3>
+    <div class="subtitle-profile mt-5">Mes Minicasts</h3>
 
     <% @minicasts.each do |minicast| %>
         <%= link_to minicast_path(minicast) do%>
