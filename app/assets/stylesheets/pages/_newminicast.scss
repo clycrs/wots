@@ -1,6 +1,6 @@
 .micro-record {
   border: 5px solid #6FB9C3;
-  margin: 40px auto;
+  margin: 20px auto;
   border-radius: 50%;
   width: 150px;
   height: 150px;
@@ -36,38 +36,62 @@
 }
 
 #record {
-    background-color:#112938;
-    border-width: medium;
-    border-color:  white;
+    background-color: #112938;
+    /* border-width: medium; */
+    /* border-color: white; */
     color: white;
-    padding: 20px;
+    /* padding: 18px; */
     text-align: center;
     text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 15px;
+    /* display: inline-block; */
+    /* font-size: 16px; */
+    margin: 4px 10px;
     cursor: pointer;
-    max-width: 50%;
-    max-height: 15%;
     border-radius: 50%;
     position: relative;
+    border: 2px solid white;
+    /* object-fit: cover; */
+    width: 4em;
+    height: 4em;
 }
 #stopRecord {
+  background-color: #EBF8FF;
+ /* border-width: medium; */
+    /* border-color: white; */
+    color: white;
+    /* padding: 18px; */
+    text-align: center;
+    text-decoration: none;
+    /* display: inline-block; */
+    /* font-size: 16px; */
+    margin: 4px 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    position: relative;
+    border: 2px solid  #6FB9C3;
+    /* object-fit: cover; */
+    width: 4em;
+    height: 4em;
+}
+
+#deleteRecord {
   background-color: #6FB9C3;
-  border-width: medium;
-  border-color:  white;
-  color: white;
-  padding: 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 15px;
-  cursor: pointer;
-  max-width: 50%;
-  max-height: 15%;
-  border-radius: 50%;
-  position: relative;
+  /* border-width: medium; */
+    /* border-color: white; */
+    color: white;
+    /* padding: 18px; */
+    text-align: center;
+    text-decoration: none;
+    /* display: inline-block; */
+    /* font-size: 16px; */
+    margin: 4px 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    position: relative;
+    border: 2px solid #6FB9C3;
+    /* object-fit: cover; */
+    width: 4em;
+    height: 4em;
 }
 
 #recordedAudio {

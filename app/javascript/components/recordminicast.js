@@ -2,6 +2,7 @@ const audioChunks = [];
 
 function handlerFunction(stream) {
   const rec = new MediaRecorder(stream);
+  const deleteRecord = document.querySelector("#deleteRecord");
 
   record.onclick = e => {
     console.log('I was clicked')
@@ -26,9 +27,26 @@ function handlerFunction(stream) {
     console.log("I was clicked")
     record.disabled = false;
     stop.disabled = true;
+    deleteRecord.disabled = false;
     record.style.backgroundColor = "#6FB9C3"
+    stopRecord.style.backgroundColor = "#6FB9C3"
+    console.log(rec)
     rec.stop();
   }
+
+  deleteRecord.onclick = e => {
+    console.log("I was clicked")
+    recordedAudio.src = "";
+    // recordedAudio.controls = false;
+    // recordedAudio.autoplay = false;
+    deleteRecord.disabled = true;
+    record.disabled = false;
+    stop.disabled = true;
+    record.style.backgroundColor = "#EBF8FF"
+    const input = $("#cast_audio")
+    input[0].value = "";
+  }
+
 }
 
 function sendData(data) {
@@ -36,7 +54,6 @@ function sendData(data) {
   reader.onload = function (event) {
     const input = $("#cast_audio")
     input[0].value = event.target.result;
-    // input.files = [event.target.result]
   };
   reader.readAsDataURL(data);
 }
