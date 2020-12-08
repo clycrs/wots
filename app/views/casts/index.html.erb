@@ -1,3 +1,37 @@
 <div class="container">
-  <h2>Les podcasts</h2>
+  <h2>Les podcasts </h2>
+
+  <% @casts.each do |cast| %>
+    <% if cast.format == "podcast" %>
+      <%= link_to podcast_path(cast) do %>
+        <div class="card-podcast">
+          <div class="podcast-img-container">
+            <%= image_tag "components/play-card-podcast.svg", class: "play-btn" %>
+            <%= cl_image_tag cast.photo.key, class: "podcast-img-illu" %>
+          </div>
+          <div class="card-txts">
+            <div class="signature">
+                <p><%= cast.portrait.title %></p>
+            </div>
+            <div class="citation-card">
+              <p><%= cast.title %></p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+
+    <% else %>
+
+      <%= link_to minicast_path(cast) do %>
+        <div class="card-minicast">
+          <div class="podcast-picto-container">
+            <%= image_tag "components/microphone.svg", size: "25x25", class: "podcast-picto-img" %>
+          </div>
+          <div class="minicast-card-title">
+            <%= cast.title %>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  <% end %>
 </div>

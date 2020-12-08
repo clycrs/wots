@@ -1,5 +1,14 @@
 <div>
   <h2>Ecouter une aventure</h2>
+
+  <% Category.all.each do |category| %>
+    <h6><%= category.title %></h6>
+    <% category.sub_categories.each do |sub_category| %>
+    <%= link_to "Les podcasts #{sub_category.title}", casts_path(sub_category_id: sub_category.id) %>
+    <% end %>
+  <% end %>
+
+
   <div class="spacer d-flex justify-content-center"></div>
   <div class="d-flex justify-content-center mt-5 mb-5">
     <p class="paragraphe-switch">Carte</p>
@@ -19,7 +28,7 @@
   </div>
 
   <h2>Les plus écoutés</h2>
-  <div class="spacer"></div>
+
   <% @podcasts.limit(5).each do |podcast| %>
     <%= link_to podcast_path(podcast) do %>
     <div class="card-podcast">
