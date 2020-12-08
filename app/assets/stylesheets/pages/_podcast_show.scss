@@ -1,36 +1,49 @@
 .podcast-show {
-  background: white !important;
   min-height: 100vh;
+  background-image: asset-url("grands_podcasts.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
 
-.podcast-header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 120px;
-}
+  .podcast-header {
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
 
-  h1:after {
+    p {
+      font-size: 20px;
+      color: white;
+    }
+  }
+
+  .index_podcast:after {
       height: 2px;
       display: block;
       width: 30px;
-      background: #112938;
+      background: #6FB9C3;
       margin: 0 auto;
       content: '';
   }
 
   h2 {
-      color: #112938;
+      color: white;
+      margin-top: 10px;
   }
 
   .nav {
     justify-content: center;
-    padding-top: 1.5em;
+
   }
 
   .nav-link {
     color: $blue-medium;
     opacity: 1 !important;
     font-size: 20px;
+    letter-spacing: 0.1em;
+  }
+
+  .tab-content {
+    margin: 0 50px 160px 50px;
+    font-family: $futura-book;
   }
 
   .tab-pane {
@@ -38,9 +51,9 @@
   }
 
   .nav-link.active {
-    font-weight: bolder;
     height: 20px;
-    background-color: white !important;
+    font-family: $futura-medium;
+    background-color: transparent !important;
     color: #112938 !important;
     font-size: 20px;
   }
@@ -51,7 +64,7 @@
   }
 
   iframe {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
   }
@@ -65,8 +78,13 @@
   }
 
   .wave {
+    font-size: 30px;
+    color: white;
+  }
+
+  .wave-white {
     font-size: 60px;
-    color: #112938;
+    color: #112938 ;
   }
 
   #pills-home {

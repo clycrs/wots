@@ -1,0 +1,15 @@
+.titlelogin {
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+  .titlelogin:after {
+      height: 2px;
+      display: block;
+      width: 30px;
+      background:#6FB9C3;
+      margin: 20px auto;
+      content: '';
+  }
+
+  abbr { display:none; }

@@ -1,41 +1,45 @@
 <div class="container text-center">
 
   <div class="subtitle-profile"><%= @user.first_name %></div>
-   
   <%= cl_image_tag @user.photo.key, alt: "alttext", class: "avatar-large" %>
-  
+
   <div class="description">
   <div class ="paragraphe-profile"><%= @user.description %></div>
   </div>
 
   <%= link_to new_minicast_path do %>
-  <div class="card-register" > 
-    <div class="podcast-picto-container">          
-    <%= image_tag "components/microphone-white.svg", size: "25x25", class: "podcast-picto-img" %> 
-      </div>     
+  <div class="card-register" >
+    <div class="podcast-picto-container">
+    <%= image_tag "components/microphone-white.svg", size: "25x25", class: "podcast-picto-img" %>
+      </div>
     <div class="minicast-card-title">
       <h4>Enregistrer un podcast</h4>
     </div>
   </div>
   <%end%>
- 
+
 
 
     <div class="subtitle-profile">Mes Minicasts</h3>
 
     <% @minicasts.each do |minicast| %>
-         <%= link_to minicast_path(minicast) do%>
-            <div class="card-minicast" > 
-              
-                <div class="podcast-picto-container">          
-                  <%= image_tag "components/microphone.svg", size: "25x25", class: "podcast-picto-img" %> 
-                </div>     
+        <%= link_to minicast_path(minicast) do%>
+          <div class="card-with-delete">
+            <div class="card-minicast" id="card-for-delete">
+                <div class="podcast-picto-container">
+                  <%= image_tag "components/microphone.svg", size: "25x25", class: "podcast-picto-img" %>
+                </div>
                 <div class="minicast-card-title">
                   <%=minicast.title%>
-                </div> 
-                          
-            </div>   
-          <%end%>
+                </div>
+            </div>
+
+            <div class="delete-minicast">
+              <%= link_to image_tag("components/delete.svg", size: "15x15"), minicast_path(minicast), method: :delete, data: { confirm: "Etes-vous sûr de le supprimer?" } %>
+            </div>
+          </div>
+
         <%end%>
+    <%end%>
   </div>
 </div>

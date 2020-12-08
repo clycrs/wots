@@ -1,12 +1,21 @@
 
-<div class="container podcast-show text-center" id="show-container">
+<div class="container minicast-show text-center" id="show-container">
 
-<h2><%= @minicast.title %></h2>
+  <h2><%= @minicast.title %></h2>
+  <p> par <%= @minicast.user.first_name %></p>
 
-  <p style= "color:black"> par <%= @minicast.user.first_name %></p>
+  <div class="d-flex justify-content-center mt-3 mb-3">
+      <button type="button" class="btn btn-default" aria-label="Left Align">
+        <%= link_to "◀", class: "wave" %>
+        <span class= "glyphicon glyphicon-triangle-left" aria-hidden="true"></span>
+      </button>
 
-  <div>
-    <%= image_tag "components/microphone.svg", size: "120x120" %> 
+      <%= image_tag "microminicasts.png", width: 350, height: 300, crop: :fill %> 
+
+      <button type="button" class="btn btn-default" aria-label="Left Align">
+        <%= link_to "▶", class: "wave"%>
+        <span class= "glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+      </button>
   </div>
 
   <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
@@ -22,5 +31,10 @@
     <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"><%= @minicast.description %></div>
     <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">"Je n'arrive pas à comprendre votre point de vue concernant le mouillage sauvage!"</div>
   </div>
+  <audio
+      controls
+      src="<%= cloudinary_url("#{@minicast.audio.key}.mp3", resource_type: "video") %>">
+          Your browser does not support the
+          <code>audio</code> element.
+  </audio>
 </div>
-

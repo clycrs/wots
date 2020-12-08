@@ -1,0 +1,52 @@
+.minicast-show {
+  min-height: 100vh;
+  background-image: asset-url("minicasts.png");
+  background-size: 100% 100%;
+  background-color: white;
+  padding-top: 20px;
+
+
+  .nav {
+    justify-content: center;
+  }
+
+  .nav-link {
+    color: $blue-medium;
+    opacity: 1 !important;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+  }
+
+  .tab-content {
+    margin: 0 50px 160px 50px;
+    font-family: $futura-book;
+  }
+
+  .tab-pane {
+    color: #112938;
+  }
+
+  .nav-link.active {
+    height: 20px;
+    font-family: $futura-medium;
+    background-color: transparent !important;
+    color: #112938 !important;
+    font-size: 20px;
+  }
+
+  .wave-white {
+    font-size: 60px;
+    color: #112938 ;
+  }
+
+  #pills-home {
+    margin: 0 auto;
+  }
+
+  .wave {
+    font-size: 30px;
+    color: white;
+  }
+
+}
+

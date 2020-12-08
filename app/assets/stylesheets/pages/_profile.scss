@@ -1,0 +1,22 @@
+.card-with-delete  {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+#card-for-delete {
+  width: 70vw;
+  align-self: center;
+}
+
+.delete-minicast {
+  align-self: center;
+}
+
+.delete-minicast img {
+  // border: 1px solid $blue-light;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color:#6FB9C3;
+}
