@@ -307,6 +307,7 @@ minicast_1.sub_categories << avarie
 minicast_1.sub_categories << equipement
 minicast_1.save!
 
+file_minicast_2 = File.open(Rails.root.join("db/fixtures/minicasts/testaudio.mp3"))
 minicast_2 = Cast.new(
   format: "minicast",
   title: "Mouillage en terre corse",
@@ -315,10 +316,13 @@ minicast_2 = Cast.new(
   published_date: "15/09/2020",
   user: lise
 )
+minicast_2.audio.attach(io: file_minicast_2, filename: 'testaudio.mp3', content_type: 'audio/mpeg')
 minicast_2.sub_categories << mouillage
 minicast_2.sub_categories << bourse
 minicast_2.sub_categories << voyage
 minicast_2.save!
+
+file_minicast_3 = File.open(Rails.root.join("db/fixtures/minicasts/testaudio.mp3"))
 minicast_3 = Cast.new(
   format: "minicast",
   title: "Cherche équipière expérimenté pour traversée de l'Atlantique",
@@ -327,11 +331,13 @@ minicast_3 = Cast.new(
   published_date: "09/09/2020",
   user: ludivine
 )
+minicast_3.audio.attach(io: file_minicast_3, filename: 'testaudio.mp3', content_type: 'audio/mpeg')
 minicast_3.sub_categories << voilier
 minicast_3.sub_categories << astuces
 minicast_3.sub_categories << bourse
 minicast_3.save!
 
+file_minicast_4 = File.open(Rails.root.join("db/fixtures/minicasts/testaudio.mp3"))
 minicast_4 = Cast.new(
   format: "minicast",
   title: "Groix de bois",
@@ -340,11 +346,13 @@ minicast_4 = Cast.new(
   published_date: "10/10/2020",
   user: carole
 )
+minicast_4.audio.attach(io: file_minicast_4, filename: 'testaudio.mp3', content_type: 'audio/mpeg')
 minicast_4.sub_categories << culture
 minicast_4.sub_categories << voyage
 minicast_4.sub_categories << reportage
 minicast_4.save!
 
+file_minicast_5 = File.open(Rails.root.join("db/fixtures/minicasts/testaudio.mp3"))
 minicast_5 = Cast.new(
   format: "minicast",
   title: "Les horticulteurs du bassin",
@@ -353,6 +361,7 @@ minicast_5 = Cast.new(
   published_date: "04/04/2020",
   user: jeanne
 )
+minicast_5.audio.attach(io: file_minicast_5, filename: 'testaudio.mp3', content_type: 'audio/mpeg')
 minicast_5.sub_categories << culture
 minicast_5.sub_categories << science
 minicast_5.sub_categories << reportage
