@@ -1,9 +1,10 @@
 Portrait.destroy_all
-User.destroy_all
+Comment.destroy_all
+CastSubCategory.destroy_all
 SubCategory.destroy_all
 Category.destroy_all
-Comment.destroy_all
 Cast.destroy_all
+User.destroy_all
 
 
 #USERS
@@ -386,81 +387,3 @@ maud.photos.attach(io: file_maud, filename: 'maud.jpg', content_type: 'image/jpg
 puts "finish portraits"
 
 #MINICASTS
-
-file_minicast_1 = File.open(Rails.root.join("db/fixtures/minicasts/testaudio.mp3"))
-minicast_1 = Cast.new(
-  format: "minicast",
-  title: "Démater au large de la Nouvelle-Calédonie",
-  description: "Je vous raconte mon expérience traumatisante et comment je m'en suis sorti grâce à mon instinct de survie",
-  localisation: "Nouméa",
-  published_date: "30/09/2020",
-  user: maxine
-  )
-minicast_1.audio.attach(io: file_minicast_1, filename: 'testaudio.mp3', content_type: 'audio/mpeg')
-minicast_1.sub_categories << voilier
-minicast_1.sub_categories << insolite
-minicast_1.sub_categories << avarie
-minicast_1.sub_categories << equipement
-minicast_1.save!
-
-file_minicast_2 = File.open(Rails.root.join("db/fixtures/minicasts/testaudio.mp3"))
-minicast_2 = Cast.new(
-  format: "minicast",
-  title: "Mouillage en terre corse",
-  description: "Superbe expérience avec des marins locaux et comment j'ai découvert de superbes spots naturelles grâce à eux",
-  localisation: "Ajaccio",
-  published_date: "15/09/2020",
-  user: lise
-)
-minicast_2.audio.attach(io: file_minicast_2, filename: 'testaudio.mp3', content_type: 'audio/mpeg')
-minicast_2.sub_categories << mouillage
-minicast_2.sub_categories << bourse
-minicast_2.sub_categories << voyage
-minicast_2.save!
-
-file_minicast_3 = File.open(Rails.root.join("db/fixtures/minicasts/testaudio.mp3"))
-minicast_3 = Cast.new(
-  format: "minicast",
-  title: "Cherche équipière expérimenté pour traversée de l'Atlantique",
-  description: "J'ai une expérience limitée en voile et j'aimerais réaliser mon rêve de traversée l'Atlantique. Je cherche donc la coéquipière parfaite et expérimentée pour mener le projet à bien.",
-  localisation: "Lorient",
-  published_date: "09/09/2020",
-  user: ludivine
-)
-minicast_3.audio.attach(io: file_minicast_3, filename: 'testaudio.mp3', content_type: 'audio/mpeg')
-minicast_3.sub_categories << voilier
-minicast_3.sub_categories << astuces
-minicast_3.sub_categories << bourse
-minicast_3.save!
-
-file_minicast_4 = File.open(Rails.root.join("db/fixtures/minicasts/testaudio.mp3"))
-minicast_4 = Cast.new(
-  format: "minicast",
-  title: "Groix de bois",
-  description: "Traversée vers l'île de Groix, départ au large de Lorient devant les sous-marins et les voiliers près pour le vendée globe",
-  localisation: "Lorient",
-  published_date: "10/10/2020",
-  user: carole
-)
-minicast_4.audio.attach(io: file_minicast_4, filename: 'testaudio.mp3', content_type: 'audio/mpeg')
-minicast_4.sub_categories << culture
-minicast_4.sub_categories << voyage
-minicast_4.sub_categories << reportage
-minicast_4.save!
-
-file_minicast_5 = File.open(Rails.root.join("db/fixtures/minicasts/testaudio.mp3"))
-minicast_5 = Cast.new(
-  format: "minicast",
-  title: "Les horticulteurs du bassin",
-  description: "Rencontre avec les horticulteurs du bassin d'Arcachon, ces marchandises tant enviées. Comment font-ils pour les élever et les rendre aussi bonnes?",
-  localisation: "Arcachon",
-  published_date: "04/04/2020",
-  user: jeanne
-)
-minicast_5.audio.attach(io: file_minicast_5, filename: 'testaudio.mp3', content_type: 'audio/mpeg')
-minicast_5.sub_categories << culture
-minicast_5.sub_categories << science
-minicast_5.sub_categories << reportage
-minicast_5.save!
-
-puts "finish minicasts"
