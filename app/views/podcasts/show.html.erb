@@ -8,15 +8,17 @@
 
     <div class="d-flex justify-content-center mt-3 mb-3 podcast-placeholder">
       <button type="button" class="btn btn-default" aria-label="Left Align">
-        <%= link_to "◀", podcast_path(@previous_podcast), class: "wave" %>
-        <span class= "glyphicon glyphicon-triangle-left" aria-hidden="true"></span>
+        <%= link_to podcast_path(@previous_podcast) do %>
+          <%= image_tag "components/left-arrow.svg" %>
+        <% end %>
       </button>
 
       <%= cl_image_tag @podcast.photo.key, width: 350, height: 300, crop: :fill %>
 
       <button type="button" class="btn btn-default" aria-label="Left Align">
-        <%= link_to "▶", podcast_path(@next_podcast), class: "wave"%>
-        <span class= "glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+        <%= link_to podcast_path(@next_podcast) do %>
+          <%= image_tag "components/right-arrow.svg" %>
+        <% end %>
       </button>
     </div>
 
@@ -35,16 +37,16 @@
       </div>
 
       <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-      
-      <% @comments.each do |comment|  %>      
-      <div><%= comment.content  %></div>      
+
+      <% @comments.each do |comment|  %>
+      <div><%= comment.content  %></div>
       <%end%>
-      
+
       <%= simple_form_for [@podcast, @comment] do |f| %>
       <div class="add-comment">
         <%= f.input :content, label: "Ajouter un commentaire" %>
       </div>
-      
+
         <div class="form-actions text-center">
           <%= f.button :submit, "COMMENTER", class: "btn-master" %>
         </div>
