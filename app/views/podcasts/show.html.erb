@@ -2,7 +2,7 @@
   <div class="container podcast-show text-center" id="show-container">
     <div class="podcast-header">
       <p class= "index_podcast">#<%= @index_podcast %></p>
-      <h2><%= @podcast.title %></h2>
+      <h2>"<%= @podcast.title %>"</h2>
       <p> par l'équipe Women of the Seas </p>
     </div>
 
@@ -30,8 +30,27 @@
     </ul>
 
     <div class="tab-content" id="pills-tabContent">
-      <div class="tab-pane fade show active" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"><%= @podcast.portrait.description %></div>
-      <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">"Très intéressant, hâte d'entendre le deuxième épisode !"</div>
+      <div class="tab-pane fade show active" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+      <%= @podcast.portrait.description %>
+      </div>
+
+      <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+      
+      <% @comments.each do |comment|  %>      
+      <div><%= comment.content  %></div>      
+      <%end%>
+      
+      <%= simple_form_for [@podcast, @comment] do |f| %>
+      <div class="add-comment">
+        <%= f.input :content, label: "Ajouter un commentaire" %>
+      </div>
+      
+        <div class="form-actions text-center">
+          <%= f.button :submit, "COMMENTER", class: "btn-master" %>
+        </div>
+      <%end%>
+
+      </div>
     </div>
 
     <iframe src=<%= @podcast.url %> frameBorder=0 width="100%" height="110px" allow="autoplay"></iframe>

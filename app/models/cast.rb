@@ -3,7 +3,9 @@ class Cast < ApplicationRecord
   has_many :cast_sub_categories, dependent: :destroy
   has_many :sub_categories, through: :cast_sub_categories
   has_many :categories, through: :sub_categories
+  has_many :comments
   has_one :portrait
+
 
   validates :format, inclusion: { in: %w[podcast minicast] }
   has_one_attached :photo
