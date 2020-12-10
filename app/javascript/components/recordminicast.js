@@ -19,7 +19,7 @@ function handlerFunction(stream) {
       recordedAudio.src = URL.createObjectURL(blob);
       recordedAudio.controls = true;
       recordedAudio.autoplay = true;
-      // sendData(blob)
+      sendData(blob)
     }
   }
 
