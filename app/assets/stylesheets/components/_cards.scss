@@ -16,7 +16,6 @@
 .podcast-img-container {
   position: relative;
   margin-right: 20px;
-
 }
 
 .podcast-img-illu {
@@ -72,13 +71,13 @@
 .card-minicast {
   width: 90%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   border: 1px solid $blue-medium;
   border-radius: 12px;
   color: white;
   margin: 20px auto;
-  }
+}
 
 .podcast-picto-container {
   width: 60px;
@@ -87,7 +86,7 @@
   justify-content: space-between;
   align-items: center;
 
-  }
+}
 
 .podcast-picto-img {
   width: 60px;
@@ -95,16 +94,23 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
 
-  }
+.card-register {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid $blue-medium;
+  border-radius: 40px;
+  color: white;
+  margin: 20px 10%;
+  background-color: #6FB9C3;
+}
 
-  .card-register {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    border: 1px solid $blue-medium;
-    border-radius: 40px;
-    color: white;
-    margin: 20px 10%;
-    background-color: #6FB9C3;
-  }
+.minicast-user {
+  margin-right: 20px;
+}
+
+.minicast-card-title {
+  flex: 1;
+}

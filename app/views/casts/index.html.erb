@@ -30,6 +30,9 @@
           <div class="minicast-card-title">
             <%= cast.title %>
           </div>
+          <div class="minicast-user">
+            <%= cl_image_tag cast.user.photo.key, class: "avatar-small" %>
+          </div>
         </div>
       <% end %>
     <% end %>

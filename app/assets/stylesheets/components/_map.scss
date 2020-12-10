@@ -1,6 +1,6 @@
 /* Bloc map */
 
-#map {
+#map, #map-view {
   width: 100%;
   height: 400px;
 }
@@ -14,7 +14,6 @@
 .mapboxgl-popup {
   width: 150px;
   min-height: 180px;
-
 }
 
 .mapboxgl-popup-content {
