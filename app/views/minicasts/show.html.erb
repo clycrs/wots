@@ -2,19 +2,24 @@
 <div class="container minicast-show text-center" id="show-container">
 
   <h2><%= @minicast.title %></h2>
-  <p> par <%= @minicast.user.first_name %></p>
+  <%= link_to user_path do %>
+    <%= cl_image_tag @minicast.user.photo.key, class: "avatar mb-2 mt-2" %>
+    <p> par <%= @minicast.user.first_name %></p>
+  <% end %>
 
   <div class="d-flex justify-content-center mt-3 mb-3 minicast-placeholder">
       <button type="button" class="btn btn-default" aria-label="Left Align">
-        <%= link_to "◀", class: "wave" %>
-        <span class= "glyphicon glyphicon-triangle-left" aria-hidden="true"></span>
+        <%= link_to minicast_path(@previous_minicast) do %>
+        <%= image_tag "components/left-arrow-dark.svg" %>
+        <% end %>
       </button>
 
       <%= image_tag "microminicasts.png", width: 350, height: 300, crop: :fill %> 
 
       <button type="button" class="btn btn-default" aria-label="Left Align">
-        <%= link_to "▶", class: "wave"%>
-        <span class= "glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+        <%= link_to minicast_path(@next_minicast) do %>
+        <%= image_tag "components/right-arrow-dark.svg" %>
+        <% end %>
       </button>
   </div>
 

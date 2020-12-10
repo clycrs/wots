@@ -28,7 +28,7 @@ import "bootstrap";
 import { initMapbox } from '../plugins/init_mapbox';
 import { initAudioMinicast } from '../components/recordminicast';
 import { initSwitch } from '../components/switch';
-
+import { initFilter } from '../components/filter';
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
@@ -36,4 +36,5 @@ document.addEventListener('turbolinks:load', () => {
   initMapbox();
   initAudioMinicast();
   initSwitch();
+  initFilter();
 });

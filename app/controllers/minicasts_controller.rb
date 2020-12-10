@@ -8,14 +8,18 @@ class MinicastsController < ApplicationController
     @minicasts         = Cast.where(format: "minicast")
     @minicast          = @minicasts.find(params[:id])
 
+
     @comment          = Comment.new
    
     @comments         = @minicast.comments
 
-    # @index_minicast    = Cast.minicasts.index(@miniast) + 1
+   
 
-    # @previous_minicast = Cast.minicasts[@index_minicast - 2]
-    # @next_minicast     = Cast.minicasts[@index_minicast]
+    @index_minicast    = Cast.minicasts.index(@minicast) + 1
+
+
+    @previous_minicast = Cast.minicasts[@index_minicast - 2] || Cast.minicasts.last
+    @next_minicast     = Cast.minicasts[@index_minicast] || Cast.minicasts.first
   end
 
   def new
@@ -28,7 +32,7 @@ class MinicastsController < ApplicationController
     @minicast.published_date = Date.today
     @minicast.format = "minicast"
     if cast_params[:audio].present?
-      audio_data = Base64.decode64(cast_params[:audio].gsub("data:audio/mpeg-3;base64,", ""))
+      audio_data = Base64.decode64(cast_params[:audio].gsub(/data:.+base64,/, ''))
       io = StringIO.new(audio_data)
       @minicast.audio.attach(io: io, filename: 'audio.mp3', content_type: 'audio/mpeg')
     end

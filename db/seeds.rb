@@ -1,8 +1,10 @@
 Portrait.destroy_all
-User.destroy_all
+Comment.destroy_all
+CastSubCategory.destroy_all
 SubCategory.destroy_all
 Category.destroy_all
 Cast.destroy_all
+User.destroy_all
 
 
 #USERS

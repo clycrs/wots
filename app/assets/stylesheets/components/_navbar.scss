@@ -102,3 +102,13 @@
   top: 21px;
   left: 8px;
   }
+
+@media (max-width: 640px) {
+  .navbar-brand img {
+    width: 125px;
+   }
+
+  .navbar-brand {
+    margin-right: 0;
+  }
+}

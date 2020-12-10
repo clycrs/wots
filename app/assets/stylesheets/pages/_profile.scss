@@ -5,7 +5,7 @@
 
 .paragraphe-profile {
   line-height: 1.5;
-  font-family: 'Futura-PT-Book';
+  font-family: 'Futura-PT-light';
   width: 95%;
   margin: 0 auto;
 }
@@ -22,13 +22,17 @@
 }
 
 .delete-minicast {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 32px;
+  height: 32px;
   align-self: center;
+  border-radius: 20px;
+  background-color: #6FB9C3;
 }
 
-.delete-minicast img {
-  // border: 1px solid $blue-light;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color:#6FB9C3;
+a[data-confirm] img {
+  margin-top: -10px;
 }
