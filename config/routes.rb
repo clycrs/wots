@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
+  get "/mentionslegales", to: "pages#mentionslegales"
 
   resources :users #public
   resource :profile, only: [:show]  #current_user

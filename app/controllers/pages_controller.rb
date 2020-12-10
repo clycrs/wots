@@ -1,6 +1,9 @@
 class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:home]
 
+  def mentionslegales
+  end
+
   def home
     @podcasts = Cast.podcasts
     @minicasts = Cast.minicasts
