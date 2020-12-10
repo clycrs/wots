@@ -37,7 +37,7 @@
       <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
       
       <% @comments.each do |comment|  %>      
-      <div><%= comment.content  %></div>      
+      <div> <strong><%=comment.user.first_name%></strong> <%= comment.content  %></div>      
       <%end%>
       
       <%= simple_form_for [@podcast, @comment] do |f| %>

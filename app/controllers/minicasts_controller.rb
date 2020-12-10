@@ -8,6 +8,10 @@ class MinicastsController < ApplicationController
     @minicasts         = Cast.where(format: "minicast")
     @minicast          = @minicasts.find(params[:id])
 
+    @comment          = Comment.new
+   
+    @comments         = @minicast.comments
+
     # @index_minicast    = Cast.minicasts.index(@miniast) + 1
 
     # @previous_minicast = Cast.minicasts[@index_minicast - 2]
