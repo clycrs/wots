@@ -1,4 +1,5 @@
 class CastsController < ApplicationController
+
   def index
     if params[:sub_category_id].present?
       @casts = Cast.joins(:cast_sub_categories)
@@ -6,5 +7,6 @@ class CastsController < ApplicationController
     else
       @casts = Cast.all
     end
+    @sub_category = SubCategory.find(params[:sub_category_id])
   end
 end
