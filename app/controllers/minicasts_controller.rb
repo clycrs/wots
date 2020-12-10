@@ -10,8 +10,8 @@ class MinicastsController < ApplicationController
 
     @index_minicast    = Cast.minicasts.index(@minicast) + 1
 
-    @previous_minicast = Cast.minicasts[@index_minicast - 2] || Cast.last
-    @next_minicast     = Cast.minicasts[@index_minicast] || Cast.first
+    @previous_minicast = Cast.minicasts[@index_minicast - 2] || Cast.minicasts.last
+    @next_minicast     = Cast.minicasts[@index_minicast] || Cast.minicasts.first
   end
 
   def new
