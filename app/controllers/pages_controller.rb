@@ -4,7 +4,7 @@ class PagesController < ApplicationController
 
   def mentionslegales
   end
-  
+
   def welcome
   end
 
@@ -37,4 +37,5 @@ class PagesController < ApplicationController
 
     @markers = @pod_markers + @mini_markers
   end
+
 end
