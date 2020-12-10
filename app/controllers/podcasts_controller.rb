@@ -11,10 +11,19 @@ class PodcastsController < ApplicationController
 
     @index_podcast    = Cast.podcasts.index(@podcast) + 1
 
+
+
+    
+    
+    
+
     @previous_podcast = Cast.podcasts[@index_podcast - 2] || Cast.podcasts.last
     @next_podcast     = Cast.podcasts[@index_podcast] || Cast.podcasts.first
 
+
     @comment          = Comment.new
+   
     @comments         = @podcast.comments
+    
   end
 end

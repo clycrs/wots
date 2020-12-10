@@ -34,7 +34,21 @@
 
   <div class="tab-content" id="pills-tabContent">
     <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"><%= @minicast.description %></div>
-    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">"Je n'arrive pas à comprendre votre point de vue concernant le mouillage sauvage!"</div>
+    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+      <% @comments.each do |comment|  %>      
+        <div> <strong><%=comment.user.first_name%></strong> <%= comment.content  %></div>      
+      <%end%>
+        
+      <%= simple_form_for [@minicast, @comment] do |f| %>
+        <div class="add-comment">
+          <%= f.input :content, label: "Ajouter un commentaire" %>
+        </div>
+        <div class="form-actions text-center">
+          <%= f.button :submit, "COMMENTER", class: "btn-master" %>
+        </div>
+      <%end%>
+      
+    </div>    
   </div>
   <audio
       controls
