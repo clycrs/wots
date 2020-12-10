@@ -10,10 +10,8 @@ class MinicastsController < ApplicationController
 
 
     @comment          = Comment.new
-   
     @comments         = @minicast.comments
 
-   
 
     @index_minicast    = Cast.minicasts.index(@minicast) + 1
 

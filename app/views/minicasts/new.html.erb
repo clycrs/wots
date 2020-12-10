@@ -14,7 +14,7 @@
 
   <%= simple_form_for @minicast, url: minicasts_path do |f| %>
     <div class = "minicastform">
-        <%= f.input :title, label: "Titre du podcast", placeholder: "Spots à Belle-île-en-mer" %>
+        <%= f.input :title, label: "Titre du minicast", placeholder: "Spots à Belle-île-en-mer" %>
         <%= f.input :description, label: "Description", placeholder: "Je vous partage mes meilleurs spots" %>
         <%= f.input :localisation, label: "Localisation", placeholder: "Belle-île-en-Mer" %>
         <%= f.association :sub_categories, label: "Thèmes"%>

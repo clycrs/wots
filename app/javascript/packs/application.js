@@ -34,6 +34,7 @@ import { initFilter } from '../components/filter';
 
 document.addEventListener('turbolinks:load', () => {
   initMapbox();
+
   initAudioMinicast();
   initSwitch();
   initFilter();
