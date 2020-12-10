@@ -1,7 +1,7 @@
 <body style="background-color:white;">
   <div class="container podcast-show text-center" id="show-container">
     <div class="podcast-header">
-      <p class= "index_podcast">#<%= @index_podcast %></p>
+      <p class= "index_podcast"></p>
       <h2>"<%= @podcast.title %>"</h2>
       <p> par l'équipe Women of the Seas </p>
     </div>
@@ -38,12 +38,12 @@
 
       <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
 
-      
-      <% @comments.each do |comment|  %>      
-      <div> <strong><%=comment.user.first_name%></strong> <%= comment.content  %></div>      
+
+      <% @comments.each do |comment|  %>
+      <div> <strong><%=comment.user.first_name%></strong> <%= comment.content  %></div>
 
 
-     
+
 
       <%end%>
 
