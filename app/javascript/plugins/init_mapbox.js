@@ -4,7 +4,7 @@ const buildMap = (mapElement) => {
   mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
   return new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/chadludo/ckhnn4u5710vs1ap4gzwzn7rm'
+    style: 'mapbox://styles/chadludo/ckhnn4u5710vs1ap4gzwzn7rm?optimize=true'
   });
 };
 
@@ -30,18 +30,31 @@ const addMarkersToMap = (map, markers) => {
 const fitMapToMarkers = (map, markers) => {
   const bounds = new mapboxgl.LngLatBounds();
   markers.forEach(marker => bounds.extend([ marker.lng, marker.lat ]));
-  map.fitBounds(bounds, { padding: 70, maxZoom: 24 });
+  map.fitBounds(bounds, { padding: 70, duration: 0 });
 };
 
 const initMapbox = () => {
   const mapElement = document.getElementById('map');
+
   if (mapElement) {
-    const map = buildMap(mapElement);
-    const markers = JSON.parse(mapElement.dataset.markers);
-    console.log(markers)
-    addMarkersToMap(map, markers);
-    fitMapToMarkers(map, markers);
+    // Using setTimeout to prevent map from being displayed before DOM parent element #map loading has been completed by browser
+    // which offset the final width of the Mapbox canvas
+    // https://github.com/mapbox/mapbox-gl-js/issues/2156#issuecomment-186425892
+
+    setTimeout(() => {
+      const map = buildMap(mapElement);
+      const markers = JSON.parse(mapElement.dataset.markers);
+
+      window.map     = map;
+      window.markers = markers;
+      window.fitMapToMarkers = fitMapToMarkers;
+
+      addMarkersToMap(map, markers);
+      fitMapToMarkers(map, markers);
+    }, 500);
   }
 };
+
+
 
 export { initMapbox };

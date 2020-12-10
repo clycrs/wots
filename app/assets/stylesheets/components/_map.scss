@@ -1,15 +1,11 @@
-/* Bloc map */
-
-#map {
-  width: 100%;
-  height: 400px;
+#map, #map-view {
+  background-color: $blue-dark;
 }
 
 .mapboxgl-ctrl, a.mapboxgl-ctrl-logo {
  display: none;
 }
 
-/* pop up info */
 
 .mapboxgl-popup {
   width: 150px;
