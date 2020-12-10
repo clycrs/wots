@@ -1,5 +1,5 @@
 <div class="container text-center">
-  <h2>Les aventures à écouter</h2>
+  <h2><%= @sub_category.title%></h2>
 
   <% @casts.each do |cast| %>
     <% if cast.format == "podcast" %>
@@ -29,6 +29,9 @@
           </div>
           <div class="minicast-card-title">
             <%= cast.title %>
+          </div>
+          <div class="minicast-user">
+            <%= cl_image_tag cast.user.photo.key, class: "avatar-small" %>
           </div>
         </div>
       <% end %>

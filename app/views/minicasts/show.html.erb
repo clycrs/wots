@@ -1,8 +1,7 @@
-
 <div class="container minicast-show text-center" id="show-container">
 
   <h2><%= @minicast.title %></h2>
-  <%= link_to user_path do %>
+  <%= link_to user_path(@minicast.user) do %>
     <%= cl_image_tag @minicast.user.photo.key, class: "avatar mb-2 mt-2" %>
     <p> par <%= @minicast.user.first_name %></p>
   <% end %>
@@ -35,10 +34,10 @@
   <div class="tab-content" id="pills-tabContent">
     <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"><%= @minicast.description %></div>
     <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-      <% @comments.each do |comment|  %>      
-        <div> <strong><%=comment.user.first_name%></strong> <%= comment.content  %></div>      
+      <% @comments.each do |comment|  %>
+        <div> <strong><%=comment.user.first_name%></strong> <%= comment.content  %></div>
       <%end%>
-        
+
       <%= simple_form_for [@minicast, @comment] do |f| %>
         <div class="add-comment">
           <%= f.input :content, label: "Ajouter un commentaire" %>
@@ -47,8 +46,8 @@
           <%= f.button :submit, "COMMENTER", class: "btn-master" %>
         </div>
       <%end%>
-      
-    </div>    
+
+    </div>
   </div>
   <audio
       controls
