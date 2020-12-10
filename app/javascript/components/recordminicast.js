@@ -19,7 +19,7 @@ function handlerFunction(stream) {
       recordedAudio.src = URL.createObjectURL(blob);
       recordedAudio.controls = true;
       recordedAudio.autoplay = true;
-      sendData(blob)
+      // sendData(blob)
     }
   }
 
@@ -32,6 +32,7 @@ function handlerFunction(stream) {
     stopRecord.style.backgroundColor = "#6FB9C3"
     console.log(rec)
     rec.stop();
+    sendData()
   }
 
   deleteRecord.onclick = e => {
@@ -49,11 +50,12 @@ function handlerFunction(stream) {
 
 }
 
-function sendData(data) {
+function sendData() {
+  const data = new Blob(audioChunks);
   const reader = new FileReader();
-  reader.onload = function (event) {
+  reader.onloadend = function (event) {
     const input = $("#cast_audio")
-    input[0].value = event.target.result;
+    input[0].value = reader.result;
   };
   reader.readAsDataURL(data);
 }

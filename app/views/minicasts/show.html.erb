@@ -2,8 +2,10 @@
 <div class="container minicast-show text-center" id="show-container">
 
   <h2><%= @minicast.title %></h2>
-  <%= cl_image_tag @minicast.user.photo.key, class: "avatar mb-2 mt-2" %>
-  <p> par <%= @minicast.user.first_name %></p>
+  <%= link_to user_path do %>
+    <%= cl_image_tag @minicast.user.photo.key, class: "avatar mb-2 mt-2" %>
+    <p> par <%= @minicast.user.first_name %></p>
+  <% end %>
 
   <div class="d-flex justify-content-center mt-3 mb-3 minicast-placeholder">
       <button type="button" class="btn btn-default" aria-label="Left Align">

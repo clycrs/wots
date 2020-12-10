@@ -24,7 +24,7 @@ class MinicastsController < ApplicationController
     @minicast.published_date = Date.today
     @minicast.format = "minicast"
     if cast_params[:audio].present?
-      audio_data = Base64.decode64(cast_params[:audio].gsub("data:audio/mp4;base64,", ""))
+      audio_data = Base64.decode64(cast_params[:audio].gsub(/data:.+base64,/, ''))
       io = StringIO.new(audio_data)
       @minicast.audio.attach(io: io, filename: 'audio.mp3', content_type: 'audio/mpeg')
     end
